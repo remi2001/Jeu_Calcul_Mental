@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".View.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
-            android:text="Score" />
+            android:text="Meilleurs Scores" />
 
         <Space
             android:layout_width="match_parent"
