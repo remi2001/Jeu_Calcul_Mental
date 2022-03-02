@@ -1,14 +1,16 @@
-package com.example.jeu_calcul_mental;
+package com.example.jeu_calcul_mental.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Activite_jeu extends AppCompatActivity {
+import com.example.jeu_calcul_mental.R;
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activite_jeu);
+        setContentView(R.layout.activity_main);
     }
 }
