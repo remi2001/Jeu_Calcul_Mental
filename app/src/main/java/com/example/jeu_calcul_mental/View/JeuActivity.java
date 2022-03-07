@@ -52,9 +52,15 @@ public class JeuActivity extends AppCompatActivity {
         Button boutonNeuf = findViewById(R.id.boutton9);
         boutonNeuf.setOnClickListener(view -> AjoutValeur(9));
 
-        Button boutonMoins = findViewById(R.id.bouttonMoins);
-        boutonMoins.setOnClickListener(view -> AjoutValeur());
+        Button boutonEffacer = findViewById(R.id.bouttonEffacer);
+        boutonEffacer.setOnClickListener(view->videTextView());
 
+    }
+
+    private boolean videTextView() {
+        TextViewResultat.setText("");
+        premierElement=0;
+        return true;
     }
 
     private void AjoutValeur(Integer valeur)
