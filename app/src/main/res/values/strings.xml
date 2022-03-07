@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">Jeu_Calcul_Mental</string>
+    <string name="app_nom" translatable="false">Jeu_Calcul_Mental</string>
     <string name="jeu">Jeu</string>
     <string name="meilleurs_scores">Meilleurs Scores</string>
     <string name="effacer">Effacer</string>
+    <string name="score">Score</string>
+    <string name="nom">Nom</string>
+    <string name="les_10_meilleurs_joueurs">Les 10 meilleurs joueurs</string>
 </resources>

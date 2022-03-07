@@ -3,4 +3,7 @@
     <string name="jeu">Game</string>
     <string name="meilleurs_scores">High Scores</string>
     <string name="effacer">Clean</string>
+    <string name="score">Score</string>
+    <string name="nom">Name</string>
+    <string name="les_10_meilleurs_joueurs">The 10 best players</string>
 </resources>
