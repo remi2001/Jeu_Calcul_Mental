@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_nom">Jeu_Calcul_Mental</string>
+    <string name="app_name">Jeu_Calcul_Mental</string>
     <string name="jeu">Jeu</string>
     <string name="meilleurs_scores">Meilleurs Scores</string>
     <string name="effacer">Effacer</string>
