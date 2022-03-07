@@ -55,6 +55,9 @@ public class JeuActivity extends AppCompatActivity {
         Button boutonEffacer = findViewById(R.id.bouttonEffacer);
         boutonEffacer.setOnClickListener(view->videTextView());
 
+        Button boutonValider = findViewById(R.id.bouttonValider);
+        //boutonValider.setOnClickListener(view->);
+
     }
 
     private boolean videTextView() {
