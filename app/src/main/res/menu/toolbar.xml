@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/TxtScore"
-        android:title="Score :"
+        android:title="@string/scoreJeu"
         app:showAsAction="always" />
     <item
         android:id="@+id/NbScore"
@@ -11,7 +11,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/TxtErreur"
-        android:title="Erreurs possible:"
+        android:title="@string/erreurs_possible_jeu"
         app:showAsAction="always" />
     <item
         android:id="@+id/NbErreurs"

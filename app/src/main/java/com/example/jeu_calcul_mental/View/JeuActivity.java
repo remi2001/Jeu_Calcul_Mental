@@ -10,18 +10,29 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.jeu_calcul_mental.EnumOperation;
 import com.example.jeu_calcul_mental.R;
+
+import java.util.zip.Inflater;
 
 public class JeuActivity extends AppCompatActivity {
 
-    private Integer premierElement = 0;
-    //private Integer secondElement = 0;
+    private Integer ElementResultat = 0;
     private TextView TextViewResultat;
+
+    private TextView TextViewCalcul;
+    private Integer premierElement = 0;
+    private Integer secondElement = 0;
+    private Integer BORNE_MAX=9999;
+    private EnumOperation TypeOperation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jeu);
+
+        TextViewCalcul = findViewById(R.id.textViewCalcul);
+        AjoutValeurCalcul();
 
         TextViewResultat = findViewById(R.id.textViewReponse);
 
@@ -67,29 +78,34 @@ public class JeuActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.toolbar,menu);
-        //MenuItem toolbarCalculer = menu.findItem(R.id.toolbarCalculer);
-        //MenuItem toolbarVider = menu.findItem(R.id.toolbarVider);
-
-        //toolbarCalculer.setOnMenuItemClickListener(menuItem -> calculResultat() );
-        //toolbarVider.setOnMenuItemClickListener(menuItem -> videTextView() );
         return true;
     }
 
     private boolean videTextView() {
         TextViewResultat.setText("");
-        premierElement=0;
+        ElementResultat=0;
         return true;
     }
 
     private void AjoutValeur(Integer valeur)
     {
-        premierElement = 10 * premierElement + valeur;
+        ElementResultat = 10 * ElementResultat + valeur;
         majTextView();
     }
 
+    private void AjoutValeurCalcul(){
+        premierElement = (int) Math.random()*(100-0);
+        int nb = (int) Math.random()*(4-0);
+        //switch case
+        secondElement = (int) Math.random()*(100-0);
+        majTextView();
+    }
+
+
+
     private void majTextView() {
         String textAAfficher="";
-        textAAfficher = premierElement.toString();
+        textAAfficher = ElementResultat.toString();
         TextViewResultat.setText(textAAfficher);
     }
 }
