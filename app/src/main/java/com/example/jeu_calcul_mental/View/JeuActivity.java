@@ -33,9 +33,9 @@ public class JeuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_jeu);
 
         TextViewCalcul = findViewById(R.id.textViewCalcul);
-        AjoutValeurCalcul();
-
         TextViewResultat = findViewById(R.id.textViewReponse);
+
+        AjoutValeurCalcul();
 
         Button boutonZero = findViewById(R.id.boutton0);
         boutonZero.setOnClickListener(view -> AjoutValeurReponse(0));
@@ -72,7 +72,6 @@ public class JeuActivity extends AppCompatActivity {
 
         Button boutonValider = findViewById(R.id.bouttonValider);
         boutonValider.setOnClickListener(view->Verification());
-
     }
 
     @Override
@@ -143,11 +142,12 @@ public class JeuActivity extends AppCompatActivity {
                 resultat= premierElement*secondElement;
                 break;
             default:
-                resultat=0;
+                resultat=null;
         }
         if(resultat==ElementResultat)
         {
             Score += 10;
+
         }
     }
 }
