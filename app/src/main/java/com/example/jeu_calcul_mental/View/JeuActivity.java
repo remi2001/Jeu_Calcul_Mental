@@ -5,25 +5,31 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.jeu_calcul_mental.EnumOperation;
 import com.example.jeu_calcul_mental.R;
 
-import java.util.zip.Inflater;
+import java.util.Random;
 
 public class JeuActivity extends AppCompatActivity {
 
     private Integer ElementResultat = 0;
     private TextView TextViewResultat;
 
+    private TextView TextViewCalcul;
+    private Integer premierElement = 0;
+    private Integer secondElement = 0;
+    private String TypeOperation;
+    private Random random = new Random();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jeu);
+
+        TextViewCalcul = findViewById(R.id.textViewCalcul);
+        AjoutValeurCalcul();
 
         TextViewResultat = findViewById(R.id.textViewReponse);
 
@@ -89,5 +95,20 @@ public class JeuActivity extends AppCompatActivity {
         String textAAfficher="";
         textAAfficher = ElementResultat.toString();
         TextViewResultat.setText(textAAfficher);
+    }
+
+    private void AjoutValeurCalcul()
+    {
+        premierElement = random.nextInt(100);
+
+        secondElement = random.nextInt(100);
+        majTextViewCalcul();
+    }
+
+
+    private void majTextViewCalcul() {
+        String textAAfficher="";
+        textAAfficher = premierElement + " " + TypeOperation + " " + secondElement;
+        TextViewCalcul.setText(textAAfficher);
     }
 }
