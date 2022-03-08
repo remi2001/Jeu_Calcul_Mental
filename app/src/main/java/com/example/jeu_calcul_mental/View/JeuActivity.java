@@ -99,9 +99,23 @@ public class JeuActivity extends AppCompatActivity {
 
     private void AjoutValeurCalcul()
     {
-        premierElement = random.nextInt(100);
-
-        secondElement = random.nextInt(100);
+        premierElement = random.nextInt(10);
+        int nb = random.nextInt(4);
+        switch (nb) {
+            case 0 :
+                TypeOperation="+";
+                break;
+            case 1 :
+                TypeOperation="-";
+                break;
+            case 2 :
+                TypeOperation="x";
+                break;
+            case 3 :
+                TypeOperation="/";
+                break;
+        }
+        secondElement = random.nextInt(10);
         majTextViewCalcul();
     }
 
