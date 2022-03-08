@@ -20,19 +20,10 @@ public class JeuActivity extends AppCompatActivity {
     private Integer ElementResultat = 0;
     private TextView TextViewResultat;
 
-    private TextView TextViewCalcul;
-    private Integer premierElement = 0;
-    private Integer secondElement = 0;
-    private Integer BORNE_MAX=9999;
-    private EnumOperation TypeOperation;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jeu);
-
-        TextViewCalcul = findViewById(R.id.textViewCalcul);
-        AjoutValeurCalcul();
 
         TextViewResultat = findViewById(R.id.textViewReponse);
 
@@ -92,15 +83,6 @@ public class JeuActivity extends AppCompatActivity {
         ElementResultat = 10 * ElementResultat + valeur;
         majTextView();
     }
-
-    private void AjoutValeurCalcul(){
-        premierElement = (int) Math.random()*(100-0);
-        int nb = (int) Math.random()*(4-0);
-        //switch case
-        secondElement = (int) Math.random()*(100-0);
-        majTextView();
-    }
-
 
 
     private void majTextView() {
