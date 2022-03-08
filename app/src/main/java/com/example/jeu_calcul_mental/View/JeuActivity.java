@@ -22,6 +22,7 @@ public class JeuActivity extends AppCompatActivity {
     private Integer secondElement = 0;
     private String TypeOperation;
     private Random random = new Random();
+    private int nbOperation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +68,7 @@ public class JeuActivity extends AppCompatActivity {
         boutonEffacer.setOnClickListener(view->videTextView());
 
         Button boutonValider = findViewById(R.id.bouttonValider);
-        //boutonValider.setOnClickListener(view->);
+        boutonValider.setOnClickListener(view->Verification());
 
     }
 
@@ -100,8 +101,8 @@ public class JeuActivity extends AppCompatActivity {
     private void AjoutValeurCalcul()
     {
         premierElement = random.nextInt(10);
-        int nb = random.nextInt(4);
-        switch (nb) {
+        nbOperation = random.nextInt(3);
+        switch (nbOperation) {
             case 0 :
                 TypeOperation="+";
                 break;
@@ -124,5 +125,30 @@ public class JeuActivity extends AppCompatActivity {
         String textAAfficher="";
         textAAfficher = premierElement + " " + TypeOperation + " " + secondElement;
         TextViewCalcul.setText(textAAfficher);
+    }
+    
+    private void Verification(){
+        //Ajouter une condition
+        Integer resultat;
+        switch(nbOperation){
+            case 0 :
+                resultat= premierElement+secondElement;
+                break;
+            case 1 :
+                resultat= premierElement-secondElement;
+                break;
+            case 2 :
+                resultat= premierElement*secondElement;
+                break;
+            case 3 :
+                resultat= premierElement/secondElement;
+                break;
+            default:
+                resultat=0;
+        }
+        if(resultat==ElementResultat)
+        {
+            
+        }
     }
 }
