@@ -7,6 +7,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/NbScore"
+        android:title="0"
         app:showAsAction="always" />
     <item
         android:id="@+id/TxtErreur"
@@ -14,5 +15,6 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/NbErreurs"
+        android:title="3"
         app:showAsAction="always" />
 </menu>

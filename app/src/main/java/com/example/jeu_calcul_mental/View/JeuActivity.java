@@ -3,6 +3,9 @@ package com.example.jeu_calcul_mental.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -58,6 +61,18 @@ public class JeuActivity extends AppCompatActivity {
         Button boutonValider = findViewById(R.id.bouttonValider);
         //boutonValider.setOnClickListener(view->);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.toolbar,menu);
+        //MenuItem toolbarCalculer = menu.findItem(R.id.toolbarCalculer);
+        //MenuItem toolbarVider = menu.findItem(R.id.toolbarVider);
+
+        //toolbarCalculer.setOnMenuItemClickListener(menuItem -> calculResultat() );
+        //toolbarVider.setOnMenuItemClickListener(menuItem -> videTextView() );
+        return true;
     }
 
     private boolean videTextView() {
