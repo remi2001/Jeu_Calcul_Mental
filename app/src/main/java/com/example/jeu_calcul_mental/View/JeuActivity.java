@@ -20,12 +20,11 @@ public class JeuActivity extends AppCompatActivity {
     private TextView TextViewResultat;
 
     private TextView TextViewCalcul;
-    private Integer premierElement = 0;
-    private Integer secondElement = 0;
+    private Integer PremierChiffreDuCalcul;
+    private Integer ChoixTypeOperation;
     private String TypeOperation;
-    private Random random = new Random();
-    private int nbOperation;
-    private int Score=0;
+    private Integer DeuxiemeChiffreDuCalcul;
+    private Random Aleat = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,83 +70,53 @@ public class JeuActivity extends AppCompatActivity {
         boutonEffacer.setOnClickListener(view->videTextViewReponse());
 
         Button boutonValider = findViewById(R.id.bouttonValider);
-        boutonValider.setOnClickListener(view->Verification());
+        //boutonValider.setOnClickListener(view->Verification());
     }
 
+    //toolbar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.toolbar,menu);
 
-        MenuItem NbScore = menu.findItem(R.id.NbScore);
+        //NbScore = menu.findItem(R.id.NbScore);
         return true;
     }
 
+    //Vidage de la textViewReponse lorque l'on clique sur le bouton effacer
     private boolean videTextViewReponse() {
         TextViewResultat.setText("");
         ElementResultat=0;
         return true;
     }
 
+    //Ajout de la valeur correpondant au bouton sur lequelle on appuyer
     private void AjoutValeurReponse(Integer valeur)
     {
         ElementResultat = 10 * ElementResultat + valeur;
         majTextViewReponse();
     }
 
-
+    //Mise a jour du textViewReponse lorsque la valeur est modifier
     private void majTextViewReponse() {
         String textAAfficher="";
         textAAfficher = ElementResultat.toString();
         TextViewResultat.setText(textAAfficher);
     }
 
-    private void AjoutValeurCalcul()
-    {
-        premierElement = random.nextInt(10);
-        nbOperation = random.nextInt(3);
-        switch (nbOperation) {
+    //Permmettant d'ajouter une valeur
+    private void AjoutValeurCalcul() {
+        PremierChiffreDuCalcul = (int) Aleat.nextInt(100);
+        ChoixTypeOperation = (int) Aleat.nextInt(3);
+        switch (ChoixTypeOperation) {
             case 0 :
-                TypeOperation="+";
-                break;
+                TypeOperation = "+";
             case 1 :
-                TypeOperation="-";
-                break;
+                TypeOperation = "-";
             case 2 :
-                TypeOperation="x";
-                break;
+                TypeOperation = "x";
         }
-        secondElement = random.nextInt(10);
-        majTextViewCalcul();
-    }
+        DeuxiemeChiffreDuCalcul = (int) Aleat.nextInt(100);
 
-
-    private void majTextViewCalcul() {
-        String textAAfficher="";
-        textAAfficher = premierElement + " " + TypeOperation + " " + secondElement;
-        TextViewCalcul.setText(textAAfficher);
-    }
-    
-    private void Verification(){
-        //Ajouter une condition
-        Integer resultat;
-        switch(nbOperation){
-            case 0 :
-                resultat= premierElement+secondElement;
-                break;
-            case 1 :
-                resultat= premierElement-secondElement;
-                break;
-            case 2 :
-                resultat= premierElement*secondElement;
-                break;
-            default:
-                resultat=null;
-        }
-        if(resultat==ElementResultat)
-        {
-            Score += 10;
-
-        }
     }
 }
