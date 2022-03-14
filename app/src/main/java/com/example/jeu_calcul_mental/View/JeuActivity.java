@@ -9,6 +9,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.jeu_calcul_mental.R;
 
@@ -17,14 +18,11 @@ import java.util.Random;
 public class JeuActivity extends AppCompatActivity {
 
     private Integer ElementResultat = 0;
+    private Integer BorneMax=999999999;
     private TextView TextViewResultat;
 
     private TextView TextViewCalcul;
-    private Integer PremierChiffreDuCalcul;
-    private Integer ChoixTypeOperation;
-    private String TypeOperation;
-    private Integer DeuxiemeChiffreDuCalcul;
-    private Random Aleat = new Random();
+    private final Random Aleat = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +91,11 @@ public class JeuActivity extends AppCompatActivity {
     //Ajout de la valeur correpondant au bouton sur lequelle on appuyer
     private void AjoutValeurReponse(Integer valeur)
     {
-        ElementResultat = 10 * ElementResultat + valeur;
+        if(10*ElementResultat+valeur > BorneMax){
+            Toast.makeText(this,getString(R.string.ErreurTropGrande),Toast.LENGTH_LONG).show();
+        }else {
+            ElementResultat = 10 * ElementResultat + valeur;
+        }
         majTextViewReponse();
     }
 
@@ -106,17 +108,6 @@ public class JeuActivity extends AppCompatActivity {
 
     //Permmettant d'ajouter une valeur
     private void AjoutValeurCalcul() {
-        PremierChiffreDuCalcul = (int) Aleat.nextInt(100);
-        ChoixTypeOperation = (int) Aleat.nextInt(3);
-        switch (ChoixTypeOperation) {
-            case 0 :
-                TypeOperation = "+";
-            case 1 :
-                TypeOperation = "-";
-            case 2 :
-                TypeOperation = "x";
-        }
-        DeuxiemeChiffreDuCalcul = (int) Aleat.nextInt(100);
-
+        TextViewCalcul.setText("test");
     }
 }

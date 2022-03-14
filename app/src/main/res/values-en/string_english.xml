@@ -9,4 +9,5 @@
     <string name="les_10_meilleurs_joueurs">The 10 best players</string>
     <string name="scoreJeu">Score :</string>
     <string name="erreurs_possible_jeu">Possible Errors :</string>
+    <string name="ErreurTropGrande">"Value to high"</string>
 </resources>

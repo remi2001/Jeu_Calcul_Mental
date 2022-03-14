@@ -8,4 +8,5 @@
     <string name="les_10_meilleurs_joueurs">Les 10 meilleurs joueurs</string>
     <string name="scoreJeu">Score :</string>
     <string name="erreurs_possible_jeu">Erreurs possible :</string>
+    <string name="ErreurTropGrande">"Valeur trop grande"</string>
 </resources>
