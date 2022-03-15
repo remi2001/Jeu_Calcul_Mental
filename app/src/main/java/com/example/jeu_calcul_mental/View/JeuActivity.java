@@ -148,8 +148,6 @@ public class JeuActivity extends AppCompatActivity {
                 else{
                     ErreursEncorePossible--;
                 }
-                videTextViewReponse();
-                AjoutValeurCalcul();
                 break;
             case SUBSTRACT:
                 if(PremierElementCalcul-DeuxiemeElementCalcul == ElementResultat){
@@ -158,8 +156,6 @@ public class JeuActivity extends AppCompatActivity {
                 else{
                     ErreursEncorePossible--;
                 }
-                videTextViewReponse();
-                AjoutValeurCalcul();
                 break;
             case MULTIPLY:
                 if(PremierElementCalcul*DeuxiemeElementCalcul == ElementResultat){
@@ -168,10 +164,10 @@ public class JeuActivity extends AppCompatActivity {
                 else{
                     ErreursEncorePossible--;
                 }
-                videTextViewReponse();
-                AjoutValeurCalcul();
                 break;
         }
+        videTextViewReponse();
+        AjoutValeurCalcul();
         NbScore.setTitle(Score.toString());
         NbErreurs.setTitle(ErreursEncorePossible.toString());
     }
