@@ -13,14 +13,31 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/textViewEcritCalcul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Calcul :"
+            android:textColor="#009688"
+            android:textSize="20sp" />
+
+        <TextView
             android:id="@+id/textViewCalcul"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Calcul"
             android:textColor="#000000"
             android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textViewEcritReponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Reponse :"
+            android:textColor="#009688"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textViewReponse"
@@ -28,7 +45,6 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Reponse"
             android:textColor="#000000"
             android:textSize="34sp" />
 

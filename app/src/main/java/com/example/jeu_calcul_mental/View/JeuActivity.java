@@ -30,8 +30,8 @@ public class JeuActivity extends AppCompatActivity {
     private Integer DeuxiemeElementCalcul = 0;
     private final Random Aleat = new Random();
     private MenuItem NbScore;
-    private Integer Score=0;
     private MenuItem NbErreurs;
+    private Integer Score=0;
     private Integer ErreursEncorePossible = 3;
 
     @Override
@@ -131,8 +131,6 @@ public class JeuActivity extends AppCompatActivity {
             case 2 :
                 TypeOperation = EnumOperation.MULTIPLY;
                 break;
-            default:
-                //A gérer au cas ou erreur
         }
         PremierElementCalcul = Aleat.nextInt(101);
         DeuxiemeElementCalcul = Aleat.nextInt(101);
@@ -150,6 +148,7 @@ public class JeuActivity extends AppCompatActivity {
                 else{
                     ErreursEncorePossible--;
                 }
+                videTextViewReponse();
                 AjoutValeurCalcul();
                 break;
             case SUBSTRACT:
@@ -159,6 +158,7 @@ public class JeuActivity extends AppCompatActivity {
                 else{
                     ErreursEncorePossible--;
                 }
+                videTextViewReponse();
                 AjoutValeurCalcul();
                 break;
             case MULTIPLY:
@@ -168,10 +168,9 @@ public class JeuActivity extends AppCompatActivity {
                 else{
                     ErreursEncorePossible--;
                 }
+                videTextViewReponse();
                 AjoutValeurCalcul();
                 break;
-            default:
-                //a gérer au cas ou
         }
         NbScore.setTitle(Score.toString());
         NbErreurs.setTitle(ErreursEncorePossible.toString());
