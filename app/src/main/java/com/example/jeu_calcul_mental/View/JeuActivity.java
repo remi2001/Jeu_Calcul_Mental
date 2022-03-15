@@ -181,6 +181,8 @@ public class JeuActivity extends AppCompatActivity {
                 }
                 break;
         }
+        if(ErreursEncorePossible==-1)
+            finish();
         videTextViewReponse();
         AjoutValeurCalcul();
         NbScore.setTitle(Score.toString());
