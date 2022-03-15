@@ -20,7 +20,7 @@ import java.util.Random;
 public class JeuActivity extends AppCompatActivity {
 
     private Integer ElementResultat = 0;
-    private Integer BorneMax=999999999;
+    private Integer BorneMax=99999;
     private TextView TextViewResultat;
 
     private TextView TextViewCalcul;
@@ -29,6 +29,10 @@ public class JeuActivity extends AppCompatActivity {
     private Integer PremierElementCalcul = 0;
     private Integer DeuxiemeElementCalcul = 0;
     private final Random Aleat = new Random();
+    private MenuItem NbScore;
+    private Integer Score=0;
+    private MenuItem NbErreurs;
+    private Integer ErreursEncorePossible = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +87,8 @@ public class JeuActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.toolbar,menu);
 
+        NbScore = menu.findItem(R.id.NbScore);
+        NbErreurs = menu.findItem(R.id.NbErreurs);
         return true;
     }
 
@@ -139,30 +145,35 @@ public class JeuActivity extends AppCompatActivity {
         switch (TypeOperation){
             case ADD:
                 if(PremierElementCalcul+DeuxiemeElementCalcul == ElementResultat){
-                    TextViewCalcul.setText("Correct");
+                    Score += 10;
                 }
                 else{
-                    TextViewCalcul.setText("Incorrect");
+                    ErreursEncorePossible--;
                 }
+                AjoutValeurCalcul();
                 break;
             case SUBSTRACT:
                 if(PremierElementCalcul-DeuxiemeElementCalcul == ElementResultat){
-                    TextViewCalcul.setText("Correct");
+                    Score += 10;
                 }
                 else{
-                    TextViewCalcul.setText("Incorrect");
+                    ErreursEncorePossible--;
                 }
+                AjoutValeurCalcul();
                 break;
             case MULTIPLY:
                 if(PremierElementCalcul*DeuxiemeElementCalcul == ElementResultat){
-                    TextViewCalcul.setText("Correct");
+                    Score += 10;
                 }
                 else{
-                    TextViewCalcul.setText("Incorrect");
+                    ErreursEncorePossible--;
                 }
+                AjoutValeurCalcul();
                 break;
             default:
                 //a gérer au cas ou
         }
+        NbScore.setTitle(Score.toString());
+        NbErreurs.setTitle(ErreursEncorePossible.toString());
     }
 }
