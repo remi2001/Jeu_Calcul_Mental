@@ -11,8 +11,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.jeu_calcul_mental.EnumOperation;
 import com.example.jeu_calcul_mental.R;
 
+import java.lang.reflect.Type;
 import java.util.Random;
 
 public class JeuActivity extends AppCompatActivity {
@@ -22,6 +24,10 @@ public class JeuActivity extends AppCompatActivity {
     private TextView TextViewResultat;
 
     private TextView TextViewCalcul;
+    private Integer ChoixTypeOperation;
+    private EnumOperation TypeOperation;
+    private Integer PremierElementCalcul = 0;
+    private Integer DeuxiemeElementCalcul = 0;
     private final Random Aleat = new Random();
 
     @Override
@@ -68,7 +74,7 @@ public class JeuActivity extends AppCompatActivity {
         boutonEffacer.setOnClickListener(view->videTextViewReponse());
 
         Button boutonValider = findViewById(R.id.bouttonValider);
-        //boutonValider.setOnClickListener(view->Verification());
+        boutonValider.setOnClickListener(view->Verification());
     }
 
     //toolbar
@@ -77,7 +83,6 @@ public class JeuActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.toolbar,menu);
 
-        //NbScore = menu.findItem(R.id.NbScore);
         return true;
     }
 
@@ -108,6 +113,56 @@ public class JeuActivity extends AppCompatActivity {
 
     //Permmettant d'ajouter une valeur
     private void AjoutValeurCalcul() {
-        TextViewCalcul.setText("test");
+        String CalculAAfficher = "";
+        ChoixTypeOperation = Aleat.nextInt(3);
+        switch(ChoixTypeOperation){
+            case 0 :
+                TypeOperation = EnumOperation.ADD;
+                break;
+            case 1 :
+                TypeOperation = EnumOperation.SUBSTRACT;
+                break;
+            case 2 :
+                TypeOperation = EnumOperation.MULTIPLY;
+                break;
+            default:
+                //A gérer au cas ou erreur
+        }
+        PremierElementCalcul = Aleat.nextInt(101);
+        DeuxiemeElementCalcul = Aleat.nextInt(101);
+        CalculAAfficher = PremierElementCalcul.toString() + " " +
+                TypeOperation.getSymbol() + " " + DeuxiemeElementCalcul.toString();
+        TextViewCalcul.setText(CalculAAfficher);
+    }
+
+    private void Verification(){
+        switch (TypeOperation){
+            case ADD:
+                if(PremierElementCalcul+DeuxiemeElementCalcul == ElementResultat){
+                    TextViewCalcul.setText("Correct");
+                }
+                else{
+                    TextViewCalcul.setText("Incorrect");
+                }
+                break;
+            case SUBSTRACT:
+                if(PremierElementCalcul-DeuxiemeElementCalcul == ElementResultat){
+                    TextViewCalcul.setText("Correct");
+                }
+                else{
+                    TextViewCalcul.setText("Incorrect");
+                }
+                break;
+            case MULTIPLY:
+                if(PremierElementCalcul*DeuxiemeElementCalcul == ElementResultat){
+                    TextViewCalcul.setText("Correct");
+                }
+                else{
+                    TextViewCalcul.setText("Incorrect");
+                }
+                break;
+            default:
+                //a gérer au cas ou
+        }
     }
 }
