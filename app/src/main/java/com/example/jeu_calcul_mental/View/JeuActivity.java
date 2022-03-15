@@ -33,6 +33,7 @@ public class JeuActivity extends AppCompatActivity {
     private MenuItem NbErreurs;
     private Integer Score=0;
     private Integer ErreursEncorePossible = 3;
+    private boolean AjoutMoins=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +75,9 @@ public class JeuActivity extends AppCompatActivity {
         Button boutonNeuf = findViewById(R.id.boutton9);
         boutonNeuf.setOnClickListener(view -> AjoutValeurReponse(9));
 
+        Button boutonMoins = findViewById(R.id.bouttonMoins);
+        boutonMoins.setOnClickListener(view -> AjoutNegativité());
+
         Button boutonEffacer = findViewById(R.id.bouttonEffacer);
         boutonEffacer.setOnClickListener(view->videTextViewReponse());
 
@@ -96,6 +100,7 @@ public class JeuActivity extends AppCompatActivity {
     private boolean videTextViewReponse() {
         TextViewResultat.setText("");
         ElementResultat=0;
+        AjoutMoins=false;
         return true;
     }
 
@@ -113,7 +118,15 @@ public class JeuActivity extends AppCompatActivity {
     //Mise a jour du textViewReponse lorsque la valeur est modifier
     private void majTextViewReponse() {
         String textAAfficher="";
-        textAAfficher = ElementResultat.toString();
+        if (AjoutMoins==true){
+            if(ElementResultat!=0)
+                textAAfficher = "-" + ElementResultat.toString();
+            else
+                textAAfficher = "-";
+        }
+        else{
+            textAAfficher = ElementResultat.toString();
+        }
         TextViewResultat.setText(textAAfficher);
     }
 
@@ -140,6 +153,8 @@ public class JeuActivity extends AppCompatActivity {
     }
 
     private void Verification(){
+        if (AjoutMoins==true)
+            ElementResultat = -ElementResultat;
         switch (TypeOperation){
             case ADD:
                 if(PremierElementCalcul+DeuxiemeElementCalcul == ElementResultat){
@@ -170,5 +185,15 @@ public class JeuActivity extends AppCompatActivity {
         AjoutValeurCalcul();
         NbScore.setTitle(Score.toString());
         NbErreurs.setTitle(ErreursEncorePossible.toString());
+    }
+
+    private void AjoutNegativité() {
+        if(ElementResultat==0) {
+            AjoutMoins=true;
+            majTextViewReponse();
+        }
+        else{
+            Toast.makeText(this,getString(R.string.ErreurMoins),Toast.LENGTH_LONG).show();
+        }
     }
 }

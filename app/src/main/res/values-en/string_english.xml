@@ -10,4 +10,5 @@
     <string name="scoreJeu">Score :</string>
     <string name="erreurs_possible_jeu">Possible Errors :</string>
     <string name="ErreurTropGrande">"Value to high"</string>
+    <string name="ErreurMoins">"Addition less impossible"</string>
 </resources>
