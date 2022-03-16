@@ -151,6 +151,7 @@ public class JeuActivity extends AppCompatActivity {
     private void Verification(){
         if (AjoutMoins)
             ElementResultat = -ElementResultat;
+
         switch (TypeOperation){
             case ADD:
                 if(PremierElementCalcul+DeuxiemeElementCalcul == ElementResultat){
