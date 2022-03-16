@@ -187,6 +187,7 @@ public class JeuActivity extends AppCompatActivity {
         }
         if(ErreursEncorePossible==-1) {
             Intent i = new Intent(this, PseudoActivity.class);
+            i.putExtra("Score",Score);
             startActivity(i);
         }
         videTextViewReponse();
