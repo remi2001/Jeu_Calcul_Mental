@@ -11,4 +11,5 @@
     <string name="erreurs_possible_jeu">Possible Errors :</string>
     <string name="ErreurTropGrande">"Value to high"</string>
     <string name="ErreurMoins">"Addition less impossible"</string>
+    <string name="ErreurCalcul">"Calculate incorrect Try again"</string>
 </resources>
