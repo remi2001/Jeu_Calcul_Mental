@@ -12,38 +12,25 @@
         android:gravity="center_vertical"
         android:orientation="vertical">
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="5" />
-
         <Button
             android:id="@+id/bouttonJeu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
             android:backgroundTint="#00B7FF"
             android:text="@string/jeu" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
 
         <Button
             android:id="@+id/bouttonScore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="30dp"
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
             android:backgroundTint="#00B7FF"
             android:text="@string/meilleurs_scores" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="5" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

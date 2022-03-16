@@ -2,6 +2,7 @@ package com.example.jeu_calcul_mental.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -185,7 +186,8 @@ public class JeuActivity extends AppCompatActivity {
                 break;
         }
         if(ErreursEncorePossible==-1) {
-            finish();
+            Intent i = new Intent(this, PseudoActivity.class);
+            startActivity(i);
         }
         videTextViewReponse();
         NbScore.setTitle(Score.toString());
