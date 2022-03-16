@@ -34,12 +34,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="7"
+            android:background="#FFFFFF"
             android:gravity="center"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#FFFFFF"
                 android:orientation="horizontal">
 
                 <TextView
@@ -83,8 +85,7 @@
                 android:layout_marginBottom="15dp"
                 android:ems="10"
                 android:gravity="center"
-                android:inputType="textPersonName"
-                android:text="Pseudo" />
+                android:inputType="textPersonName" />
 
             <Button
                 android:id="@+id/bouttonValidationPseudo"

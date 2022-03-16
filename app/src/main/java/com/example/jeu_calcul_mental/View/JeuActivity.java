@@ -186,6 +186,7 @@ public class JeuActivity extends AppCompatActivity {
                 break;
         }
         if(ErreursEncorePossible==-1) {
+            finish();
             Intent i = new Intent(this, PseudoActivity.class);
             i.putExtra("Score",Score);
             startActivity(i);
