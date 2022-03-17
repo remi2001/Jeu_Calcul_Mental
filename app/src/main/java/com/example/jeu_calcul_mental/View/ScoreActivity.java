@@ -21,6 +21,6 @@ public class ScoreActivity extends AppCompatActivity {
         pseudo1.setText(calcul.getPseudo());
 
         TextView Score1 = findViewById(R.id.ScorePremierJoueur);
-        Score1.setText(calcul.getScore());
+        Score1.setText(""+calcul.getScore());
     }
 }

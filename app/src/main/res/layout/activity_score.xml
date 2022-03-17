@@ -46,7 +46,10 @@
                 <TextView
                     android:id="@+id/NomPremierJoueur"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
@@ -70,7 +73,10 @@
                 <TextView
                     android:id="@+id/ScorePremierJoueur"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
 
             </LinearLayout>
 

@@ -2,8 +2,8 @@ package com.example.jeu_calcul_mental.entity;
 
 public class Calcul extends BaseEntity{
 
-    String Pseudo;
-    Integer Score;
+    String Pseudo="";
+    Integer Score=0;
 
     public String getPseudo() {
         return Pseudo;
