@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.jeu_calcul_mental.R;
+import com.example.jeu_calcul_mental.Service.CalculService;
 import com.example.jeu_calcul_mental.entity.Calcul;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -16,6 +17,7 @@ public class PseudoActivity extends AppCompatActivity {
     private TextView textViewScoreFinal;
     private TextInputEditText PseudoDefini;
     private Integer Score = getIntent().getIntExtra("Score",0);
+    private CalculService calculService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,7 @@ public class PseudoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pseudo);
 
         textViewScoreFinal = findViewById(R.id.textViewScoreFinal);
-        textViewScoreFinal.setText(Integer.toString(Score));
+        textViewScoreFinal.setText(Score.toString());
 
         PseudoDefini = findViewById(R.id.TextInputEditPseudo);
 
@@ -35,8 +37,8 @@ public class PseudoActivity extends AppCompatActivity {
         Calcul calcul = new Calcul();
         calcul.setPseudo(PseudoDefini.getText().toString());
         calcul.setScore(Score);
+        calculService.storeCalculInDatabase(calcul);
 
-        finish();
         ouvreScoreActivity();
     }
 
