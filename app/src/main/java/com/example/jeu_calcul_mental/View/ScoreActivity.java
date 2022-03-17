@@ -15,12 +15,13 @@ public class ScoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
-        Calcul calcul = new Calcul();
+        String pseudo = getIntent().getStringExtra("Pseudo");
+        Integer score = getIntent().getIntExtra("Score",0);
 
         TextView pseudo1 = findViewById(R.id.NomPremierJoueur);
-        pseudo1.setText(calcul.getPseudo());
+        pseudo1.setText(/*calcul.getPseudo()*/pseudo);
 
         TextView Score1 = findViewById(R.id.ScorePremierJoueur);
-        Score1.setText(""+calcul.getScore());
+        Score1.setText(/*""+calcul.getScore()*/score);
     }
 }

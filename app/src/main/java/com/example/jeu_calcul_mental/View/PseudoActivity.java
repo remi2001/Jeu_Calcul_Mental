@@ -20,6 +20,7 @@ public class PseudoActivity extends AppCompatActivity {
     private TextInputEditText PseudoDefini;
     private Integer Score;
     private CalculService calculService;
+    private Calcul calcul = new Calcul();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +40,6 @@ public class PseudoActivity extends AppCompatActivity {
     }
 
     private void Validation(){
-        Calcul calcul = new Calcul();
         calcul.setPseudo(PseudoDefini.getText().toString());
         calcul.setScore(Score);
         calculService.storeCalculInDatabase(calcul);
@@ -50,6 +50,8 @@ public class PseudoActivity extends AppCompatActivity {
 
     private void ouvreScoreActivity(){
         Intent i = new Intent(this, ScoreActivity.class);
+        i.putExtra("Pseudo",calcul.getPseudo());
+        i.putExtra("Score",Score);
         startActivity(i);
     }
 }
