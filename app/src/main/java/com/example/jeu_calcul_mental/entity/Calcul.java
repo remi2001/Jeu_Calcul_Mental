@@ -2,40 +2,22 @@ package com.example.jeu_calcul_mental.entity;
 
 public class Calcul extends BaseEntity{
 
-    Integer premierElement;
-    Integer deuxiemeElement;
-    String symbol;
-    Double resultat;
+    String Pseudo;
+    Integer Score;
 
-    public Integer getPremierElement() {
-        return premierElement;
+    public String getPseudo() {
+        return Pseudo;
     }
 
-    public Integer getDeuxiemeElement() {
-        return deuxiemeElement;
+    public Integer getScore() {
+        return Score;
     }
 
-    public String getSymbol() {
-        return symbol;
+    public void setPseudo(String Pseudo) {
+        this.Pseudo = Pseudo;
     }
 
-    public Double getResultat() {
-        return resultat;
-    }
-
-    public void setPremierElement(Integer premierElement) {
-        this.premierElement = premierElement;
-    }
-
-    public void setDeuxiemeElement(Integer deuxiemeElement) {
-        this.deuxiemeElement = deuxiemeElement;
-    }
-
-    public void setSymbol(String symbol) {
-        this.symbol = symbol;
-    }
-
-    public void setResultat(Double resultat) {
-        this.resultat = resultat;
+    public void setScore(Integer Score) {
+        this.Score = Score;
     }
 }

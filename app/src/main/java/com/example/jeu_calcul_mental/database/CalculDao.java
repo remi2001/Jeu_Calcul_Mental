@@ -7,10 +7,8 @@ import com.example.jeu_calcul_mental.entity.Calcul;
 
 
 public class CalculDao extends BaseDao<Calcul>{
-    static String INDEX_PREMIER_ELEMENT = "premierElement";
-    static String INDEX_DEUXIEME_ELEMENT= "deuxiemeElement";
-    static String INDEX_SYMBOL = "symbol";
-    static String INDEX_RESULTAT = "resultat";
+    static String Pseudo = "pseudo";
+    static String Score = "score";
     public CalculDao(DataBaseHelper helper) {
         super(helper);
     }
@@ -22,24 +20,18 @@ public class CalculDao extends BaseDao<Calcul>{
 
     @Override
     protected void putValues(ContentValues values, Calcul entity) {
-        values.put(INDEX_PREMIER_ELEMENT,entity.getPremierElement());
-        values.put(INDEX_DEUXIEME_ELEMENT,entity.getDeuxiemeElement());
-        values.put(INDEX_SYMBOL,entity.getSymbol());
-        values.put(INDEX_RESULTAT,entity.getResultat());
+        values.put(Pseudo,entity.getPseudo());
+        values.put(Score,entity.getScore());
     }
 
     @Override
     protected Calcul getEntity(Cursor cursor) {
         cursor.moveToFirst();
         Calcul calcul = new Calcul();
-        Integer indexPremierElement = cursor.getColumnIndex(INDEX_PREMIER_ELEMENT);
-        calcul.setPremierElement(cursor.getInt(indexPremierElement));
-        Integer indexDeuxiemeElement = cursor.getColumnIndex(INDEX_DEUXIEME_ELEMENT);
-        calcul.setDeuxiemeElement(cursor.getInt(indexDeuxiemeElement));
-        Integer indexSymbol = cursor.getColumnIndex(INDEX_SYMBOL);
-        calcul.setSymbol(cursor.getString(indexSymbol));
-        Integer indexResultat = cursor.getColumnIndex(INDEX_RESULTAT);
-        calcul.setResultat(cursor.getDouble(indexResultat));
+        Integer indexPseudo = cursor.getColumnIndex(Pseudo);
+        calcul.setPseudo(cursor.getString(indexPseudo));
+        Integer indexScore = cursor.getColumnIndex(Score);
+        calcul.setScore(cursor.getInt(indexScore));
         return calcul;
     }
 }

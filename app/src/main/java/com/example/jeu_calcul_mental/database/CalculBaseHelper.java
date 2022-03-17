@@ -12,10 +12,8 @@ public class CalculBaseHelper extends DataBaseHelper{
     protected String getCreationSql() {
         String script = "CREATE TABLE IF NOT EXISTS historique (" +
                 "id  INTEGER PRIMARY KEY AUTOINCREMENT," +
-                CalculDao.INDEX_PREMIER_ELEMENT + " INTEGER NOT NULL," +
-                CalculDao.INDEX_DEUXIEME_ELEMENT + " INTEGER NOT NULL," +
-                CalculDao.INDEX_SYMBOL + " VARCHAR(255) NOT NULL," +
-                CalculDao.INDEX_RESULTAT + " INTEGER NOT NULL" +
+                CalculDao.Pseudo + " VARCHAR(255) NOT NULL,"+
+                CalculDao.Score + " INTEGER NOT NULL" +
                 ")";
         return script;
     }
