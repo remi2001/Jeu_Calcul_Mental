@@ -11,4 +11,5 @@
     <string name="ErreurTropGrande">"Valeur trop grande"</string>
     <string name="ErreurMoins">"Ajout moins impossible"</string>
     <string name="ErreurCalcul">"Calcul Incorrect Réessayer"</string>
+    <string name="ErreurValeurVide">"Entrée une valeur"</string>
 </resources>

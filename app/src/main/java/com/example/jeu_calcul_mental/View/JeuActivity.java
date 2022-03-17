@@ -32,6 +32,8 @@ public class JeuActivity extends AppCompatActivity {
     private Integer ErreursEncorePossible = 3;
     private boolean AjoutMoins=false;
 
+    private TextView TextViewErreurCalcul;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,7 @@ public class JeuActivity extends AppCompatActivity {
 
         TextViewCalcul = findViewById(R.id.textViewCalcul);
         TextViewResultat = findViewById(R.id.textViewReponse);
+        TextViewErreurCalcul = findViewById(R.id.textViewErreurCalcul);
 
         AjoutValeurCalcul();
 
@@ -156,32 +159,26 @@ public class JeuActivity extends AppCompatActivity {
         switch (TypeOperation){
             case ADD:
                 if(PremierElementCalcul+DeuxiemeElementCalcul == ElementResultat){
-                    Score += 10;
-                    AjoutValeurCalcul();
+                    ResultatCorrect();
                 }
                 else{
-                    ErreursEncorePossible--;
-                    Toast.makeText(this,getString(R.string.ErreurCalcul),Toast.LENGTH_LONG).show();
+                    ResultatIncorrect();
                 }
                 break;
             case SUBSTRACT:
                 if(PremierElementCalcul-DeuxiemeElementCalcul == ElementResultat){
-                    Score += 10;
-                    AjoutValeurCalcul();
+                    ResultatCorrect();
                 }
                 else{
-                    ErreursEncorePossible--;
-                    Toast.makeText(this,getString(R.string.ErreurCalcul),Toast.LENGTH_LONG).show();
+                    ResultatIncorrect();
                 }
                 break;
             case MULTIPLY:
                 if(PremierElementCalcul*DeuxiemeElementCalcul == ElementResultat){
-                    Score += 10;
-                    AjoutValeurCalcul();
+                    ResultatCorrect();
                 }
                 else{
-                    ErreursEncorePossible--;
-                    Toast.makeText(this,getString(R.string.ErreurCalcul),Toast.LENGTH_LONG).show();
+                    ResultatIncorrect();
                 }
                 break;
         }
@@ -203,6 +200,21 @@ public class JeuActivity extends AppCompatActivity {
         }
         else{
             Toast.makeText(this,getString(R.string.ErreurMoins),Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private void ResultatCorrect(){
+        Score += 10;
+        AjoutValeurCalcul();
+    }
+
+    private void ResultatIncorrect(){
+        if(TextViewResultat.getText()!="" && TextViewResultat.getText() != "-") {
+            ErreursEncorePossible--;
+            Toast.makeText(this, getString(R.string.ErreurCalcul), Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(this, getString(R.string.ErreurValeurVide), Toast.LENGTH_LONG).show();
         }
     }
 }
