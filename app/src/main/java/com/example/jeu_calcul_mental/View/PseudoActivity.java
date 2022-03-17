@@ -20,8 +20,5 @@ public class PseudoActivity extends AppCompatActivity {
 
         TextView textViewScoreFinal = findViewById(R.id.textViewScoreFinal);
         textViewScoreFinal.setText(Score.toString());
-
-        //Recupérer la variable score
-        //https://beeapps.developpez.com/tutoriels/passer-extra-activites/
     }
 }

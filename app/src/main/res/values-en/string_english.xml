@@ -7,11 +7,16 @@
     <string name="score">Score</string>
     <string name="nom">Name</string>
     <string name="les_10_meilleurs_joueurs">The 10 best players</string>
-    <string name="scoreJeu">Score :</string>
+    <string name="scoreJeu">Your score :</string>
     <string name="erreurs_possible_jeu">Possible Errors :</string>
     <string name="ErreurTropGrande">"Value to high"</string>
     <string name="ErreurMoins">"Addition less impossible"</string>
     <string name="ErreurValeurVide">"Enter a value"</string>
     <string name="calcul">Calculate :</string>
     <string name="reponse">Résponse :</string>
+    <string name="TextAnnonceEnregistrement">You are lose. All you have to do is save your score under a pseudo</string>
+    <string name="TextPseudo">Pseudo :</string>
+    <string name="ecrivez_votre_pseudo_ici">Write your pseudo here</string>
+    <string name="valider">Validate</string>
+    <string name="ResultatIncorrect">Incorrect result! Try again</string>
 </resources>

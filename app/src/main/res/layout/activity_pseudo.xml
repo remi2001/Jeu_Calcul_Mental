@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                android:text="Vous avez perdu. Il ne vous reste plus qu'a enregistrer votre score sous un pseudo"
+                android:text="@string/TextAnnonceEnregistrement"
                 android:textColor="#FF0000"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -52,21 +52,22 @@
                     android:layout_marginBottom="35dp"
                     android:layout_weight="1"
                     android:gravity="right|center_horizontal"
-                    android:text="Votre score est de :"
+                    android:text="@string/scoreJeu"
                     android:textColor="#020000"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded" />
 
                 <TextView
                     android:id="@+id/textViewScoreFinal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="3dp"
                     android:layout_marginBottom="35dp"
                     android:layout_weight="1"
                     android:gravity="center_horizontal|left"
-                    android:text="AfficheScore"
                     android:textColor="#000000"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded" />
             </LinearLayout>
 
             <TextView
@@ -75,27 +76,31 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
-                android:text="Pseudo :"
+                android:text="@string/TextPseudo"
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
-            <EditText
-                android:id="@+id/editTextTextPersonName"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TextInputLayoutPseudo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="textPersonName"
-                android:text="alba"
-                android:textColor="#000000" />
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/TextInputEditPseudo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:hint="@string/ecrivez_votre_pseudo_ici" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/bouttonValidationPseudo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#00B7FF"
-                android:text="Valider" />
+                android:text="@string/valider" />
         </LinearLayout>
 
     </LinearLayout>

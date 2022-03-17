@@ -2,6 +2,7 @@ package com.example.jeu_calcul_mental.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -42,6 +43,7 @@ public class JeuActivity extends AppCompatActivity {
         TextViewCalcul = findViewById(R.id.textViewCalcul);
         TextViewResultat = findViewById(R.id.textViewReponse);
         TextViewMauvaiseReponse = findViewById(R.id.textViewMauvaiseReponse);
+        TextViewMauvaiseReponse.setText("");
 
         AjoutValeurCalcul();
 
@@ -206,16 +208,16 @@ public class JeuActivity extends AppCompatActivity {
     private void ResultatCorrect(){
         Score += 10;
         AjoutValeurCalcul();
-        TextViewMauvaiseReponse.setText( "");
+        TextViewMauvaiseReponse.setText("");
     }
 
     private void ResultatIncorrect(){
         if(TextViewResultat.getText()!="" && TextViewResultat.getText() != "-") {
             ErreursEncorePossible--;
-            TextViewMauvaiseReponse.setText( "Résultat Incorrect ! Réessayez");
+            TextViewMauvaiseReponse.setText(R.string.ResultatIncorrect);
         }
         else{
-            Toast.makeText(this, getString(R.string.ErreurValeurVide), Toast.LENGTH_LONG).show();
+            Toast.makeText(this,getString(R.string.ErreurValeurVide), Toast.LENGTH_LONG).show();
         }
     }
 }
