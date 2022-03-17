@@ -19,20 +19,27 @@ import java.util.Random;
 
 public class JeuActivity extends AppCompatActivity {
 
+    //Variable permettant de gérer le resultat de l'utilisateur
     private Integer ElementResultat = 0;
     private TextView TextViewResultat;
 
+    //Variable permetttant de créer le calcul
     private TextView TextViewCalcul;
     private EnumOperation TypeOperation;
     private Integer PremierElementCalcul = 0;
     private Integer DeuxiemeElementCalcul = 0;
     private final Random Aleat = new Random();
+
+    //Variable gestion score et erreur possible
     private MenuItem NbScore;
     private MenuItem NbErreurs;
     private Integer Score=0;
     private Integer ErreursEncorePossible = 3;
+
+    //Variable permmettant de gérer les resultats négatif
     private boolean AjoutMoins=false;
 
+    //Affichage conditionnel si la reponse est mauvaise par l'utilisateur
     private TextView TextViewMauvaiseReponse;
 
     @Override
@@ -40,48 +47,51 @@ public class JeuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jeu);
 
+        //Initialisation des textview
         TextViewCalcul = findViewById(R.id.textViewCalcul);
         TextViewResultat = findViewById(R.id.textViewReponse);
         TextViewMauvaiseReponse = findViewById(R.id.textViewMauvaiseReponse);
         TextViewMauvaiseReponse.setText("");
 
+        //Methode permettant de créer et d'afficher le calcul
         AjoutValeurCalcul();
 
+        //Gestion des différents boutons
         Button boutonZero = findViewById(R.id.boutton0);
-        boutonZero.setOnClickListener(view -> AjoutValeurReponse(0));
+        boutonZero.setOnClickListener(view -> AjoutValeurResultat(0));
 
         Button boutonUn = findViewById(R.id.boutton1);
-        boutonUn.setOnClickListener(view -> AjoutValeurReponse(1));
+        boutonUn.setOnClickListener(view -> AjoutValeurResultat(1));
 
         Button boutonDeux = findViewById(R.id.boutton2);
-        boutonDeux.setOnClickListener(view -> AjoutValeurReponse(2));
+        boutonDeux.setOnClickListener(view -> AjoutValeurResultat(2));
 
         Button boutonTrois = findViewById(R.id.boutton3);
-        boutonTrois.setOnClickListener(view -> AjoutValeurReponse(3));
+        boutonTrois.setOnClickListener(view -> AjoutValeurResultat(3));
 
         Button boutonQuatre = findViewById(R.id.boutton4);
-        boutonQuatre.setOnClickListener(view -> AjoutValeurReponse(4));
+        boutonQuatre.setOnClickListener(view -> AjoutValeurResultat(4));
 
         Button boutonCinq = findViewById(R.id.boutton5);
-        boutonCinq.setOnClickListener(view -> AjoutValeurReponse(5));
+        boutonCinq.setOnClickListener(view -> AjoutValeurResultat(5));
 
         Button boutonSix = findViewById(R.id.boutton6);
-        boutonSix.setOnClickListener(view -> AjoutValeurReponse(6));
+        boutonSix.setOnClickListener(view -> AjoutValeurResultat(6));
 
         Button boutonSept = findViewById(R.id.boutton7);
-        boutonSept.setOnClickListener(view -> AjoutValeurReponse(7));
+        boutonSept.setOnClickListener(view -> AjoutValeurResultat(7));
 
         Button boutonHuit = findViewById(R.id.boutton8);
-        boutonHuit.setOnClickListener(view -> AjoutValeurReponse(8));
+        boutonHuit.setOnClickListener(view -> AjoutValeurResultat(8));
 
         Button boutonNeuf = findViewById(R.id.boutton9);
-        boutonNeuf.setOnClickListener(view -> AjoutValeurReponse(9));
+        boutonNeuf.setOnClickListener(view -> AjoutValeurResultat(9));
 
         Button boutonMoins = findViewById(R.id.bouttonMoins);
         boutonMoins.setOnClickListener(view -> AjoutNegativite());
 
         Button boutonEffacer = findViewById(R.id.bouttonEffacer);
-        boutonEffacer.setOnClickListener(view->videTextViewReponse());
+        boutonEffacer.setOnClickListener(view->videTextViewResultat());
 
         Button boutonValider = findViewById(R.id.bouttonValider);
         boutonValider.setOnClickListener(view->Verification());
@@ -93,20 +103,22 @@ public class JeuActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.toolbar,menu);
 
+        //Initialisation des item de la toolbar
         NbScore = menu.findItem(R.id.NbScore);
         NbErreurs = menu.findItem(R.id.NbErreurs);
+
         return true;
     }
 
-    //Vidage de la textViewReponse lorque l'on clique sur le bouton effacer
-    private void videTextViewReponse() {
+    //Vidage de la textViewResultat lorque l'on clique sur le bouton effacer et reinitialisation de la variable
+    private void videTextViewResultat() {
         TextViewResultat.setText("");
         ElementResultat=0;
         AjoutMoins=false;
     }
 
-    //Ajout de la valeur correpondant au bouton sur lequelle on appuyer
-    private void AjoutValeurReponse(Integer valeur)
+    //Ajout de la valeur correpondant au bouton sur lequelle on a appuyer en gérant les valeurs trop grande
+    private void AjoutValeurResultat(Integer valeur)
     {
         int borneMax = 99999;
         if(10*ElementResultat+valeur > borneMax){
@@ -114,11 +126,12 @@ public class JeuActivity extends AppCompatActivity {
         }else {
             ElementResultat = 10 * ElementResultat + valeur;
         }
-        majTextViewReponse();
+        majTextViewResultat();
     }
 
-    //Mise a jour du textViewReponse lorsque la valeur est modifier
-    private void majTextViewReponse() {
+    //Mise a jour de la textViewREsultat lorsque la valeur de ElementResultat est modifier
+    //Gestion des valeurs négative
+    private void majTextViewResultat() {
         String textAAfficher="";
         if (AjoutMoins){
             if(ElementResultat!=0)
@@ -132,9 +145,8 @@ public class JeuActivity extends AppCompatActivity {
         TextViewResultat.setText(textAAfficher);
     }
 
-    //Permmettant d'ajouter une valeur
+    //Permet d'ajouter le calcul que l'utilisateur devra resoudre en generant les valeurs aleatoirement
     private void AjoutValeurCalcul() {
-        String CalculAAfficher = "";
         PremierElementCalcul = Aleat.nextInt(101);
         DeuxiemeElementCalcul = Aleat.nextInt(101);
         int choixTypeOperation = Aleat.nextInt(4);
@@ -149,11 +161,13 @@ public class JeuActivity extends AppCompatActivity {
                 TypeOperation = EnumOperation.MULTIPLY;
                 break;
         }
-        CalculAAfficher = PremierElementCalcul.toString() + " " +
+        String CalculAAfficher = PremierElementCalcul.toString() + " " +
                 TypeOperation.getSymbol() + " " + DeuxiemeElementCalcul.toString();
         TextViewCalcul.setText(CalculAAfficher);
     }
 
+    //Permet de vérifier que le nombre entré par l'utilisateur correspond au resultat du calcul
+    //Si le nombre d'erreurs possible est inférieur a 0 on l'ance l'activité pemettant d'enrgistrer le score
     private void Verification(){
         if (AjoutMoins)
             ElementResultat = -ElementResultat;
@@ -186,31 +200,36 @@ public class JeuActivity extends AppCompatActivity {
         }
         if(ErreursEncorePossible==-1) {
             finish();
+
+            //Lancement de l'activite Pseudo en fesant passer la valeur du score entre les deux activité
             Intent i = new Intent(this, PseudoActivity.class);
             i.putExtra("Score",Score);
             startActivity(i);
         }
-        videTextViewReponse();
+        videTextViewResultat();
         NbScore.setTitle(Score.toString());
         NbErreurs.setTitle(ErreursEncorePossible.toString());
     }
 
+    //Ajout de la négativité dans le calcul uniquement si l'utilisateur n'a rien entré
     private void AjoutNegativite() {
         if(ElementResultat==0) {
             AjoutMoins=true;
-            majTextViewReponse();
+            majTextViewResultat();
         }
         else{
             Toast.makeText(this,getString(R.string.ErreurMoins),Toast.LENGTH_LONG).show();
         }
     }
 
+    //Action rélisé si le resultat du calcul correspond a la valeur entré par l'utilisateur
     private void ResultatCorrect(){
         Score += 10;
         AjoutValeurCalcul();
         TextViewMauvaiseReponse.setText("");
     }
 
+    //Action rélisé si le resultat du calcul ne correspond pas a la valeur entré par l'utilisateur
     private void ResultatIncorrect(){
         if(TextViewResultat.getText()!="" && TextViewResultat.getText() != "-") {
             ErreursEncorePossible--;
