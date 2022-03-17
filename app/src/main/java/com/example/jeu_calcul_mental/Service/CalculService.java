@@ -2,6 +2,7 @@ package com.example.jeu_calcul_mental.Service;
 
 import com.example.jeu_calcul_mental.database.CalculBaseHelper;
 import com.example.jeu_calcul_mental.database.CalculDao;
+import com.example.jeu_calcul_mental.entity.BaseEntity;
 import com.example.jeu_calcul_mental.entity.Calcul;
 
 public class CalculService {
@@ -14,8 +15,6 @@ public class CalculService {
     public long getCalculNumber(){
         return calculDao.count();
     }
-
-    //public String getPseudo(){}
 
     public void storeCalculInDatabase(Calcul calcul){
         calculDao.create(calcul);

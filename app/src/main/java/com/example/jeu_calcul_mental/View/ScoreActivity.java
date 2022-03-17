@@ -14,17 +14,15 @@ import com.example.jeu_calcul_mental.entity.Calcul;
 
 public class ScoreActivity extends AppCompatActivity {
 
-    private CalculService calculService;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
-        calculService = new CalculService(new CalculDao(new CalculBaseHelper(this)));
+        String calcul = getIntent().getStringExtra("calcul");
 
         TextView pseudo1 = findViewById(R.id.NomJoueur1);
-        //pseudo1.setText(calculService.getPseudo());
+        pseudo1.setText(calcul);
 
         TextView Score1 = findViewById(R.id.ScoreJoueur1);
         //Score1.setText(""+calculService.getScore());

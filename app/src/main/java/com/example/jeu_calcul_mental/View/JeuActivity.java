@@ -23,7 +23,7 @@ public class JeuActivity extends AppCompatActivity {
     private TextView TextViewResultat;
 
     private TextView TextViewCalcul;
-    private EnumOperation TypeOperation;
+    private EnumOperation TypeOperation = EnumOperation.ADD;
     private Integer PremierElementCalcul = 0;
     private Integer DeuxiemeElementCalcul = 0;
     private final Random Aleat = new Random();
