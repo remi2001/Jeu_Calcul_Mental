@@ -49,7 +49,7 @@
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/NomPremierJoueur"
+                    android:id="@+id/NomJoueur1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
@@ -79,7 +79,7 @@
                     app:autoSizeTextType="uniform" />
 
                 <TextView
-                    android:id="@+id/ScorePremierJoueur"
+                    android:id="@+id/ScoreJoueur1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"

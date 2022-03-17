@@ -1,5 +1,6 @@
 package com.example.jeu_calcul_mental.Service;
 
+import com.example.jeu_calcul_mental.database.CalculBaseHelper;
 import com.example.jeu_calcul_mental.database.CalculDao;
 import com.example.jeu_calcul_mental.entity.Calcul;
 
