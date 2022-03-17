@@ -10,6 +10,7 @@
     <string name="erreurs_possible_jeu">Erreurs possible :</string>
     <string name="ErreurTropGrande">"Valeur trop grande"</string>
     <string name="ErreurMoins">"Ajout moins impossible"</string>
-    <string name="ErreurCalcul">"Calcul Incorrect Réessayer"</string>
     <string name="ErreurValeurVide">"Entrée une valeur"</string>
+    <string name="calcul">Calcul :</string>
+    <string name="reponse">Réponse :</string>
 </resources>

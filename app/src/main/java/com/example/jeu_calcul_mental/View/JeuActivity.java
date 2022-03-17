@@ -32,7 +32,7 @@ public class JeuActivity extends AppCompatActivity {
     private Integer ErreursEncorePossible = 3;
     private boolean AjoutMoins=false;
 
-    private TextView TextViewErreurCalcul;
+    private TextView TextViewMauvaiseReponse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class JeuActivity extends AppCompatActivity {
 
         TextViewCalcul = findViewById(R.id.textViewCalcul);
         TextViewResultat = findViewById(R.id.textViewReponse);
-        TextViewErreurCalcul = findViewById(R.id.textViewErreurCalcul);
+        TextViewMauvaiseReponse = findViewById(R.id.textViewMauvaiseReponse);
 
         AjoutValeurCalcul();
 
@@ -206,12 +206,13 @@ public class JeuActivity extends AppCompatActivity {
     private void ResultatCorrect(){
         Score += 10;
         AjoutValeurCalcul();
+        TextViewMauvaiseReponse.setText( "");
     }
 
     private void ResultatIncorrect(){
         if(TextViewResultat.getText()!="" && TextViewResultat.getText() != "-") {
             ErreursEncorePossible--;
-            Toast.makeText(this, getString(R.string.ErreurCalcul), Toast.LENGTH_LONG).show();
+            TextViewMauvaiseReponse.setText( "Résultat Incorrect ! Réessayez");
         }
         else{
             Toast.makeText(this, getString(R.string.ErreurValeurVide), Toast.LENGTH_LONG).show();

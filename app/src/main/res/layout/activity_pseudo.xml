@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#000000"
+            android:background="#FFFFFF"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -24,10 +24,11 @@
                 android:id="@+id/textViewAnnoncePerdu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#000000"
+                android:background="#FFFFFF"
                 android:gravity="center"
                 android:text="Vous avez perdu. Il ne vous reste plus qu'a enregistrer votre score sous un pseudo"
-                android:textColor="#FF0000" />
+                android:textColor="#FF0000"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout

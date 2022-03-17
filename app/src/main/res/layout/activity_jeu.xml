@@ -18,9 +18,9 @@
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
             android:gravity="center"
-            android:text="Calcul :"
+            android:text="@string/calcul"
             android:textColor="#009688"
-            android:textSize="20sp" />
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/textViewCalcul"
@@ -38,9 +38,9 @@
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
             android:gravity="center"
-            android:text="Reponse :"
+            android:text="@string/reponse"
             android:textColor="#009688"
-            android:textSize="20sp" />
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/textViewReponse"
@@ -51,6 +51,14 @@
             android:gravity="center"
             android:textColor="#000000"
             android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textViewMauvaiseReponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#F44336"
+            android:textSize="18sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -223,7 +231,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00B7FF"
-                    android:text="OK" />
+                    android:text="Ok" />
 
             </LinearLayout>
         </LinearLayout>
