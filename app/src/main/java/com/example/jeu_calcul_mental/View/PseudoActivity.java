@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -35,7 +34,7 @@ public class PseudoActivity extends AppCompatActivity {
 
         PseudoDefini = findViewById(R.id.TextInputEditPseudo);
 
-        Button boutonValider = findViewById(R.id.bouttonValidationPseudo);
+        Button boutonValider = findViewById(R.id.bouttonRetourAccueil);
         boutonValider.setOnClickListener(view -> Validation());
     }
 

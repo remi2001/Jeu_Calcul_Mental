@@ -18,4 +18,5 @@
     <string name="ecrivez_votre_pseudo_ici">Ecrivez votre pseudo ici</string>
     <string name="valider">Valider</string>
     <string name="ResultatIncorrect">Résultat Incorrect ! Réessayez</string>
+    <string name="retour_a_l_accueil">Retour a l\'accueil</string>
 </resources>

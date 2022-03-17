@@ -15,6 +15,8 @@ public class CalculService {
         return calculDao.count();
     }
 
+    //public String getPseudo(){}
+
     public void storeCalculInDatabase(Calcul calcul){
         calculDao.create(calcul);
     }

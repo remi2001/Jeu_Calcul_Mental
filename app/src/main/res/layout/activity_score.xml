@@ -26,7 +26,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="#FFFFFF"
             android:orientation="horizontal">
 
@@ -90,5 +91,12 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/bouttonRetourAccueil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00B7FF"
+            android:text="@string/retour_a_l_accueil" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

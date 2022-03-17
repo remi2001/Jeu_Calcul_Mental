@@ -3,6 +3,7 @@ package com.example.jeu_calcul_mental.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.jeu_calcul_mental.R;
@@ -27,5 +28,8 @@ public class ScoreActivity extends AppCompatActivity {
 
         TextView Score1 = findViewById(R.id.ScoreJoueur1);
         //Score1.setText(""+calculService.getScore());
+
+        Button BouttonRetourAccueil = findViewById(R.id.bouttonRetourAccueil);
+        BouttonRetourAccueil.setOnClickListener(view -> finish());
     }
 }
