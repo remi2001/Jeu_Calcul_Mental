@@ -15,11 +15,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Initialsiation des boutons
         Button boutonJeu = findViewById(R.id.bouttonJeu);
         Button boutonScore = findViewById(R.id.bouttonScore);
 
-        //Action ralisé lorque l'on appuie sur ces boutons
         boutonJeu.setOnClickListener(view -> lanceActiviterJeu());
         boutonScore.setOnClickListener(view -> lancerActiviterScore());
     }

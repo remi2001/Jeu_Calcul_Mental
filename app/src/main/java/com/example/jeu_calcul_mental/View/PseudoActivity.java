@@ -19,9 +19,7 @@ public class PseudoActivity extends AppCompatActivity {
         Intent i = getIntent();
         Integer Score = i.getIntExtra("Score",0);
 
-        //Initialisation de la textView
         TextView textViewScoreFinal = findViewById(R.id.textViewScoreFinal);
-        //Affichage de la valeur score dans la textview
         textViewScoreFinal.setText(Score.toString());
     }
 }

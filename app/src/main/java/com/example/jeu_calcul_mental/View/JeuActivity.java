@@ -19,27 +19,22 @@ import java.util.Random;
 
 public class JeuActivity extends AppCompatActivity {
 
-    //Variable permettant de gérer le resultat de l'utilisateur
     private Integer ElementResultat = 0;
     private TextView TextViewResultat;
 
-    //Variable permetttant de créer le calcul
     private TextView TextViewCalcul;
     private EnumOperation TypeOperation;
     private Integer PremierElementCalcul = 0;
     private Integer DeuxiemeElementCalcul = 0;
     private final Random Aleat = new Random();
 
-    //Variable gestion score et erreur possible
     private MenuItem NbScore;
     private MenuItem NbErreurs;
     private Integer Score=0;
     private Integer ErreursEncorePossible = 3;
 
-    //Variable permmettant de gérer les resultats négatif
     private boolean AjoutMoins=false;
 
-    //Affichage conditionnel si la reponse est mauvaise par l'utilisateur
     private TextView TextViewMauvaiseReponse;
 
     @Override
@@ -47,7 +42,6 @@ public class JeuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jeu);
 
-        //Initialisation des textview
         TextViewCalcul = findViewById(R.id.textViewCalcul);
         TextViewResultat = findViewById(R.id.textViewReponse);
         TextViewMauvaiseReponse = findViewById(R.id.textViewMauvaiseReponse);
@@ -201,7 +195,7 @@ public class JeuActivity extends AppCompatActivity {
         if(ErreursEncorePossible==-1) {
             finish();
 
-            //Lancement de l'activite Pseudo en fesant passer la valeur du score entre les deux activité
+            //Lancement de l'activite Pseudo en fesant passer la valeur du score
             Intent i = new Intent(this, PseudoActivity.class);
             i.putExtra("Score",Score);
             startActivity(i);
