@@ -39,10 +39,12 @@ public class PseudoActivity extends AppCompatActivity {
     }
 
     private void Validation(){
-        ScorePseudo calcul = new ScorePseudo();
-        calcul.setPseudo(String.valueOf(PseudoDefini.getText()));
-        calcul.setScore(Score);
-        scorePseudoService.storeInDatabase(calcul);
+        if (Score>0) {
+            ScorePseudo calcul = new ScorePseudo();
+            calcul.setPseudo(String.valueOf(PseudoDefini.getText()));
+            calcul.setScore(Score);
+            scorePseudoService.storeInDatabase(calcul);
+        }
 
         finish();
         ouvreScoreActivity();

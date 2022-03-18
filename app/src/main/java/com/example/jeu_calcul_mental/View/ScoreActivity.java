@@ -12,6 +12,8 @@ import com.example.jeu_calcul_mental.database.ScorePseudoBaseHelper;
 import com.example.jeu_calcul_mental.database.ScorePseudoDao;
 import com.example.jeu_calcul_mental.entity.ScorePseudo;
 
+import java.security.spec.ECField;
+
 public class ScoreActivity extends AppCompatActivity {
 
     private ScorePseudoService scorePseudoService;
@@ -20,6 +22,7 @@ public class ScoreActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
+
         try {
             scorePseudoService = new ScorePseudoService(new ScorePseudoDao(new ScorePseudoBaseHelper(this)));
             ScorePseudo test = scorePseudoService.getEnregistrement();
@@ -28,7 +31,7 @@ public class ScoreActivity extends AppCompatActivity {
             TextView Score1 = findViewById(R.id.ScoreJoueur1);
 
             pseudo1.setText(test.getPseudo());
-            Score1.setText(""+test.getScore());
+            Score1.setText("" + test.getScore());
         }catch(Exception e){}
 
         Button BouttonRetourAccueil = findViewById(R.id.bouttonRetourAccueil);
