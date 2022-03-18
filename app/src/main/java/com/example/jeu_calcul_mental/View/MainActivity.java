@@ -5,22 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.jeu_calcul_mental.R;
-import com.example.jeu_calcul_mental.Service.CalculService;
-import com.example.jeu_calcul_mental.database.CalculBaseHelper;
-import com.example.jeu_calcul_mental.database.CalculDao;
+import com.example.jeu_calcul_mental.Service.ScorePseudoService;
+import com.example.jeu_calcul_mental.database.ScorePseudoBaseHelper;
+import com.example.jeu_calcul_mental.database.ScorePseudoDao;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CalculService calculService;
+    private ScorePseudoService scorePseudoService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        calculService = new CalculService(new CalculDao(new CalculBaseHelper(this)));
+        scorePseudoService = new ScorePseudoService(new ScorePseudoDao(new ScorePseudoBaseHelper(this)));
 
         Button boutonJeu = findViewById(R.id.bouttonJeu);
         Button boutonScore = findViewById(R.id.bouttonScore);

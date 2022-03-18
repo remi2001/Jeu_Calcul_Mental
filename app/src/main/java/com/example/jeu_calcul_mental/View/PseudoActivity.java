@@ -4,31 +4,28 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.jeu_calcul_mental.R;
-import com.example.jeu_calcul_mental.Service.CalculService;
-import com.example.jeu_calcul_mental.database.CalculBaseHelper;
-import com.example.jeu_calcul_mental.database.CalculDao;
-import com.example.jeu_calcul_mental.entity.Calcul;
+import com.example.jeu_calcul_mental.Service.ScorePseudoService;
+import com.example.jeu_calcul_mental.database.ScorePseudoBaseHelper;
+import com.example.jeu_calcul_mental.database.ScorePseudoDao;
+import com.example.jeu_calcul_mental.entity.ScorePseudo;
 import com.google.android.material.textfield.TextInputEditText;
-
-import java.io.Serializable;
 
 public class PseudoActivity extends AppCompatActivity {
 
     private TextView textViewScoreFinal;
     private TextInputEditText PseudoDefini;
     private Integer Score;
-    private CalculService calculService;
+    private ScorePseudoService scorePseudoService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pseudo);
-        calculService = new CalculService(new CalculDao(new CalculBaseHelper(this)));
+        scorePseudoService = new ScorePseudoService(new ScorePseudoDao(new ScorePseudoBaseHelper(this)));
 
         Score = getIntent().getIntExtra("Score",0);
 
@@ -42,10 +39,10 @@ public class PseudoActivity extends AppCompatActivity {
     }
 
     private void Validation(){
-        Calcul calcul = new Calcul();
+        ScorePseudo calcul = new ScorePseudo();
         calcul.setPseudo(String.valueOf(PseudoDefini.getText()));
         calcul.setScore(Score);
-        calculService.storeCalculInDatabase(calcul);
+        scorePseudoService.storeInDatabase(calcul);
 
         finish();
         ouvreScoreActivity();

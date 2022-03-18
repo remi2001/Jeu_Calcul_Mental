@@ -1,6 +1,6 @@
 package com.example.jeu_calcul_mental.entity;
 
-public class Calcul extends BaseEntity{
+public class ScorePseudo extends BaseEntity{
 
     private String Pseudo="";
     private Integer Score=0;

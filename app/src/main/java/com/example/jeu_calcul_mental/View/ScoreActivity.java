@@ -7,22 +7,22 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.jeu_calcul_mental.R;
-import com.example.jeu_calcul_mental.Service.CalculService;
-import com.example.jeu_calcul_mental.database.CalculBaseHelper;
-import com.example.jeu_calcul_mental.database.CalculDao;
-import com.example.jeu_calcul_mental.entity.Calcul;
+import com.example.jeu_calcul_mental.Service.ScorePseudoService;
+import com.example.jeu_calcul_mental.database.ScorePseudoBaseHelper;
+import com.example.jeu_calcul_mental.database.ScorePseudoDao;
+import com.example.jeu_calcul_mental.entity.ScorePseudo;
 
 public class ScoreActivity extends AppCompatActivity {
 
-    private CalculService calculService;
+    private ScorePseudoService scorePseudoService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
         try {
-            calculService = new CalculService(new CalculDao(new CalculBaseHelper(this)));
-            Calcul test = calculService.getEnregistrement();
+            scorePseudoService = new ScorePseudoService(new ScorePseudoDao(new ScorePseudoBaseHelper(this)));
+            ScorePseudo test = scorePseudoService.getEnregistrement();
 
             TextView pseudo1 = findViewById(R.id.NomJoueur1);
             TextView Score1 = findViewById(R.id.ScoreJoueur1);

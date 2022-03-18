@@ -2,9 +2,9 @@ package com.example.jeu_calcul_mental.database;
 
 import android.content.Context;
 
-public class CalculBaseHelper extends DataBaseHelper{
+public class ScorePseudoBaseHelper extends DataBaseHelper{
 
-    public CalculBaseHelper(Context context) {
+    public ScorePseudoBaseHelper(Context context) {
         super(context, "Calculs", 1);
     }
 
@@ -12,8 +12,8 @@ public class CalculBaseHelper extends DataBaseHelper{
     protected String getCreationSql() {
         String script = "CREATE TABLE IF NOT EXISTS historique (" +
                 "id  INTEGER PRIMARY KEY AUTOINCREMENT," +
-                CalculDao.Pseudo + " VARCHAR(255) NOT NULL,"+
-                CalculDao.Score + " INTEGER NOT NULL" +
+                ScorePseudoDao.Pseudo + " VARCHAR(255) NOT NULL,"+
+                ScorePseudoDao.Score + " INTEGER NOT NULL" +
                 ")";
         return script;
     }

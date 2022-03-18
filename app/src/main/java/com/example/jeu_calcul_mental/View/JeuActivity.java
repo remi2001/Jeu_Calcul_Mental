@@ -2,7 +2,6 @@ package com.example.jeu_calcul_mental.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,9 +13,6 @@ import android.widget.Toast;
 
 import com.example.jeu_calcul_mental.EnumOperation;
 import com.example.jeu_calcul_mental.R;
-import com.example.jeu_calcul_mental.Service.CalculService;
-import com.example.jeu_calcul_mental.database.CalculBaseHelper;
-import com.example.jeu_calcul_mental.database.CalculDao;
 
 import java.util.Random;
 

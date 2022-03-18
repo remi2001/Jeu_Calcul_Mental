@@ -3,13 +3,13 @@ package com.example.jeu_calcul_mental.database;
 import android.content.ContentValues;
 import android.database.Cursor;
 
-import com.example.jeu_calcul_mental.entity.Calcul;
+import com.example.jeu_calcul_mental.entity.ScorePseudo;
 
 
-public class CalculDao extends BaseDao<Calcul>{
+public class ScorePseudoDao extends BaseDao<ScorePseudo>{
     static String Pseudo = "pseudo";
     static String Score = "score";
-    public CalculDao(DataBaseHelper helper) {
+    public ScorePseudoDao(DataBaseHelper helper) {
         super(helper);
     }
 
@@ -19,19 +19,19 @@ public class CalculDao extends BaseDao<Calcul>{
     }
 
     @Override
-    protected void putValues(ContentValues values, Calcul entity) {
+    protected void putValues(ContentValues values, ScorePseudo entity) {
         values.put(Pseudo,entity.getPseudo());
         values.put(Score,entity.getScore());
     }
 
     @Override
-    protected Calcul getEntity(Cursor cursor) {
+    protected ScorePseudo getEntity(Cursor cursor) {
         cursor.moveToFirst();
-        Calcul calcul = new Calcul();
+        ScorePseudo ScorePseudo = new ScorePseudo();
         Integer indexPseudo = cursor.getColumnIndex(Pseudo);
-        calcul.setPseudo(cursor.getString(indexPseudo));
+        ScorePseudo.setPseudo(cursor.getString(indexPseudo));
         Integer indexScore = cursor.getColumnIndex(Score);
-        calcul.setScore(cursor.getInt(indexScore));
-        return calcul;
+        ScorePseudo.setScore(cursor.getInt(indexScore));
+        return ScorePseudo;
     }
 }
