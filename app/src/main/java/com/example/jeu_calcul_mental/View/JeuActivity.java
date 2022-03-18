@@ -14,6 +14,9 @@ import android.widget.Toast;
 
 import com.example.jeu_calcul_mental.EnumOperation;
 import com.example.jeu_calcul_mental.R;
+import com.example.jeu_calcul_mental.Service.CalculService;
+import com.example.jeu_calcul_mental.database.CalculBaseHelper;
+import com.example.jeu_calcul_mental.database.CalculDao;
 
 import java.util.Random;
 

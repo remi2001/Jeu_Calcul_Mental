@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 
 import com.example.jeu_calcul_mental.entity.BaseEntity;
+import com.example.jeu_calcul_mental.entity.Calcul;
 
 import java.util.ArrayList;
 import java.util.List;
