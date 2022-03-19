@@ -39,14 +39,26 @@ public class PseudoActivity extends AppCompatActivity {
     }
 
     private void Validation(){
-        /*if (Score>0) {
-            ScorePseudo registre = new ScorePseudo();
-            registre.setPseudo(String.valueOf(PseudoDefini.getText()));
-            registre.setScore(Score);
-            scorePseudoService.storeInDatabase(registre);
-        }*/
-        //Enregistrement dans la bdd apres
-
+        //A refaire
+        /*
+        try {
+            if (Score>0 && Score>scorePseudoService.getDernierEnregistrement().getScore()) {
+                ScorePseudo registre = new ScorePseudo();
+                registre.setPseudo(String.valueOf(PseudoDefini.getText()));
+                registre.setScore(Score);
+                scorePseudoService.storeInDatabase(registre);
+            }
+        }
+        catch (Exception e){
+         */
+            if (Score>0) {
+                ScorePseudo registre = new ScorePseudo();
+                registre.setPseudo(String.valueOf(PseudoDefini.getText()));
+                registre.setScore(Score);
+                scorePseudoService.storeInDatabase(registre);
+            }
+            //Gestion Score = 0 avant
+        //}
         finish();
         ouvreScoreActivity();
     }

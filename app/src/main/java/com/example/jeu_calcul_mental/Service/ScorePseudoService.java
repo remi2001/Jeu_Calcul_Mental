@@ -4,6 +4,7 @@ import com.example.jeu_calcul_mental.database.ScorePseudoDao;
 import com.example.jeu_calcul_mental.entity.ScorePseudo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ScorePseudoService {
     private ScorePseudoDao ScorePseudoDao;
@@ -14,9 +15,9 @@ public class ScorePseudoService {
 
     public long getCalculNumber(){return ScorePseudoDao.count();}
 
-    public ScorePseudo getEnregistrement(){return ScorePseudoDao.lastOrNull();}
+    public ScorePseudo getDernierEnregistrement(){return ScorePseudoDao.lastOrNull();}
 
-    public void storeInDatabase(ScorePseudo ScorePseudo){
-        ScorePseudoDao.create(ScorePseudo);
-    }
+    public ScorePseudo getEnregistrement(int indiceEnregistrement){return ScorePseudoDao.RecuperationElement(indiceEnregistrement);}
+
+    public void storeInDatabase(ScorePseudo ScorePseudo){ScorePseudoDao.create(ScorePseudo);}
 }

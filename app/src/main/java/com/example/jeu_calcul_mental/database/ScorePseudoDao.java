@@ -25,8 +25,7 @@ public class ScorePseudoDao extends BaseDao<ScorePseudo>{
     }
 
     @Override
-    protected ScorePseudo getEntity(Cursor cursor) {
-        cursor.moveToFirst();
+    protected ScorePseudo getEntity(Cursor cursor){
         ScorePseudo ScorePseudo = new ScorePseudo();
         Integer indexPseudo = cursor.getColumnIndex(Pseudo);
         ScorePseudo.setPseudo(cursor.getString(indexPseudo));
