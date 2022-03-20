@@ -17,54 +17,42 @@ import com.google.android.material.textfield.TextInputEditText;
 public class PseudoActivity extends AppCompatActivity {
 
     private TextView textViewScoreFinal;
-    private TextInputEditText PseudoDefini;
-    private Integer Score;
-    private ScorePseudoService ScorePseudoService;
+    private TextInputEditText pseudoDefini;
+    private Integer score;
+    private ScorePseudoService scorePseudoService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pseudo);
-        ScorePseudoService = new ScorePseudoService(new ScorePseudoDao(new ScorePseudoBaseHelper(this)));
+        scorePseudoService = new ScorePseudoService(new ScorePseudoDao(new ScorePseudoBaseHelper(this)));
 
-        Score = getIntent().getIntExtra("Score",0);
+        score = getIntent().getIntExtra("Score",0);
 
         textViewScoreFinal = findViewById(R.id.textViewScoreFinal);
-        textViewScoreFinal.setText(Score.toString());
+        textViewScoreFinal.setText(score.toString());
 
-        PseudoDefini = findViewById(R.id.TextInputEditPseudo);
+        pseudoDefini = findViewById(R.id.TextInputEditPseudo);
 
         Button boutonValider = findViewById(R.id.bouttonRetourAccueil);
         boutonValider.setOnClickListener(view -> Validation());
     }
 
     private void Validation(){
-        /*try {
-            int minScore = ScorePseudoService.getEnregistrement(ScorePseudoService.getEnregistrementNumber() - 11).getScore();
-            if (Score>0 && Score>minScore) {
-                ScorePseudo registre = new ScorePseudo();
-                registre.setPseudo(String.valueOf(PseudoDefini.getText()));
-                registre.setScore(Score);
-                ScorePseudoService.storeInDatabase(registre);
-            }
+        if (score>0) {
+            ScorePseudo registre = new ScorePseudo();
+            registre.setPseudo(String.valueOf(pseudoDefini.getText()));
+            registre.setScore(score);
+            scorePseudoService.storeInDatabase(registre);
+            ouvreScoreActivity();
         }
-        catch (Exception e){*/
-            if (Score>0) {
-                ScorePseudo registre = new ScorePseudo();
-                registre.setPseudo(String.valueOf(PseudoDefini.getText()));
-                registre.setScore(Score);
-                ScorePseudoService.storeInDatabase(registre);
-            }
-            //Gestion Score = 0 et Score trop petit page d'avant
-        //}
         finish();
-        ouvreScoreActivity();
     }
 
     private void ouvreScoreActivity(){
         Intent i = new Intent(this, ScoreActivity.class);
-        i.putExtra("Score",Score);
-        i.putExtra("Pseudo",PseudoDefini.getText());
+        i.putExtra("Score",score);
+        i.putExtra("Pseudo",pseudoDefini.getText());
         startActivity(i);
     }
 }
