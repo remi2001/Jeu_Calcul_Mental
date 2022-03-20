@@ -39,8 +39,8 @@ public class PseudoActivity extends AppCompatActivity {
     }
 
     private void Validation(){
-        try {
-            int minScore = ScorePseudoService.getEnregistrement(ScorePseudoService.getEnregistrementNumber()-11).getScore();
+        /*try {
+            int minScore = ScorePseudoService.getEnregistrement(ScorePseudoService.getEnregistrementNumber() - 11).getScore();
             if (Score>0 && Score>minScore) {
                 ScorePseudo registre = new ScorePseudo();
                 registre.setPseudo(String.valueOf(PseudoDefini.getText()));
@@ -48,7 +48,7 @@ public class PseudoActivity extends AppCompatActivity {
                 ScorePseudoService.storeInDatabase(registre);
             }
         }
-        catch (Exception e){
+        catch (Exception e){*/
             if (Score>0) {
                 ScorePseudo registre = new ScorePseudo();
                 registre.setPseudo(String.valueOf(PseudoDefini.getText()));
@@ -56,7 +56,7 @@ public class PseudoActivity extends AppCompatActivity {
                 ScorePseudoService.storeInDatabase(registre);
             }
             //Gestion Score = 0 et Score trop petit page d'avant
-        }
+        //}
         finish();
         ouvreScoreActivity();
     }

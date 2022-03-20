@@ -3,6 +3,7 @@ package com.example.jeu_calcul_mental.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.TestLooperManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -13,6 +14,7 @@ import com.example.jeu_calcul_mental.database.ScorePseudoDao;
 import com.example.jeu_calcul_mental.entity.ScorePseudo;
 
 import java.security.spec.ECField;
+import java.util.Arrays;
 import java.util.List;
 
 public class ScoreActivity extends AppCompatActivity {
@@ -29,18 +31,29 @@ public class ScoreActivity extends AppCompatActivity {
 
             ScorePseudo[] Top10 = new ScorePseudo[10];
 
-            List<ScorePseudo> TousElementBDD = ScorePseudoService.getTousLesEnregistrement();
+            List<ScorePseudo> ListeTousElementBDD = ScorePseudoService.getTousLesEnregistrement();
 
-            long max = ScorePseudoService.getEnregistrementNumber();
+            ScorePseudo[] TableauTousElementBDD = new ScorePseudo[ListeTousElementBDD.size()];
+
+            for(int i=0; i<ListeTousElementBDD.size();i++) {
+                TableauTousElementBDD[i] = ListeTousElementBDD.get(i);
+            }
+
+            //Tri des elements
+            ScorePseudo temporary;
+            for (int i = 0; i < ListeTousElementBDD.size(); i++) {
+                for (int j = i + 1; j < ListeTousElementBDD.size(); j++) {
+                    if (TableauTousElementBDD[i].getScore() < TableauTousElementBDD[j].getScore()) {
+                        temporary = TableauTousElementBDD[i];
+                        TableauTousElementBDD[i] = TableauTousElementBDD[j];
+                        TableauTousElementBDD[j] = temporary;
+                    }
+                }
+            }
 
             for(int ParcourClassement=0;ParcourClassement<10;ParcourClassement++){
-                if(max>=0) {
-
-                    for (ScorePseudo Best : TousElementBDD) {
-                        if (Best.getScore()>)
-                    }
-                    max--;
-                }
+                if(ParcourClassement<ListeTousElementBDD.size())
+                    Top10[ParcourClassement] = TableauTousElementBDD[ParcourClassement];
             }
 
             TextView pseudo1 = findViewById(R.id.NomJoueur1);
