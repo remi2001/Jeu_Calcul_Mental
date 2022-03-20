@@ -200,9 +200,6 @@ public class JeuActivity extends AppCompatActivity {
                 i.putExtra("Score", Score);
                 startActivity(i);
             }
-            else{
-                Toast.makeText(this,getString("Score null"), Toast.LENGTH_LONG).show();
-            }
         }
         videTextViewResultat();
         NbScore.setTitle(Score.toString());

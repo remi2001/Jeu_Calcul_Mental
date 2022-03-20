@@ -29,12 +29,17 @@ public class ScoreActivity extends AppCompatActivity {
         try {
             ScorePseudoService = new ScorePseudoService(new ScorePseudoDao(new ScorePseudoBaseHelper(this)));
 
+            ScorePseudo DernierEnregistrement = ScorePseudoService.getEnregistrementLastOrNull();
+
             ScorePseudo[] Top10 = new ScorePseudo[10];
 
             List<ScorePseudo> ListeTousElementBDD = ScorePseudoService.getTousLesEnregistrement();
 
+            int placementDernierEnregistrement = ListeTousElementBDD.size();
+
             ScorePseudo[] TableauTousElementBDD = new ScorePseudo[ListeTousElementBDD.size()];
 
+            //Chaque element de la liste devient un element du tableau
             for(int i=0; i<ListeTousElementBDD.size();i++) {
                 TableauTousElementBDD[i] = ListeTousElementBDD.get(i);
             }
@@ -47,10 +52,13 @@ public class ScoreActivity extends AppCompatActivity {
                         temporary = TableauTousElementBDD[i];
                         TableauTousElementBDD[i] = TableauTousElementBDD[j];
                         TableauTousElementBDD[j] = temporary;
+                        if(i==placementDernierEnregistrement)
+                            placementDernierEnregistrement=j;
                     }
                 }
             }
 
+            //Classement
             for(int ParcourClassement=0;ParcourClassement<10;ParcourClassement++){
                 if(ParcourClassement<ListeTousElementBDD.size())
                     Top10[ParcourClassement] = TableauTousElementBDD[ParcourClassement];
@@ -76,6 +84,14 @@ public class ScoreActivity extends AppCompatActivity {
             TextView score9 = findViewById(R.id.ScoreJoueur9);
             TextView pseudo10 = findViewById(R.id.NomJoueur10);
             TextView score10 = findViewById(R.id.ScoreJoueur10);
+
+            TextView scoreDernierEnregistrement = findViewById(R.id.ScoreDernierEnregistrement);
+            TextView pseudoDernierEnregistrement = findViewById(R.id.PseudoDernierEnregistrement);
+            TextView classementDernierEnregistrement = findViewById(R.id.ClassementDernierEnregistrement);
+
+            pseudoDernierEnregistrement.setText(DernierEnregistrement.getPseudo());
+            scoreDernierEnregistrement.setText("" + DernierEnregistrement.getScore());
+            classementDernierEnregistrement.setText(placementDernierEnregistrement+" :");
 
             pseudo1.setText(Top10[0].getPseudo());
             score1.setText("" + Top10[0].getScore());

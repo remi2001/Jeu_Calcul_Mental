@@ -15,6 +15,8 @@ public class ScorePseudoService {
 
     public long getEnregistrementNumber(){return ScorePseudoDao.count();}
 
+    public ScorePseudo getEnregistrementLastOrNull(){return ScorePseudoDao.lastOrNull();}
+
     public ScorePseudo getEnregistrement(long indiceEnregistrement){return ScorePseudoDao.RecuperationElement(indiceEnregistrement);}
 
     public List<ScorePseudo> getTousLesEnregistrement(){return ScorePseudoDao.RecuperationTousLesElement();}
