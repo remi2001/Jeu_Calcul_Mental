@@ -92,7 +92,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00B7FF"
-                    android:text="1" />
+                    android:text="1"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/boutton2"
@@ -102,7 +103,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00B7FF"
-                    android:text="2" />
+                    android:text="2"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/boutton3"
@@ -112,7 +114,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00B7FF"
-                    android:text="3" />
+                    android:text="3"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -132,7 +135,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00B7FF"
-                    android:text="4" />
+                    android:text="4"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/boutton5"
@@ -142,7 +146,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00B7FF"
-                    android:text="5" />
+                    android:text="5"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/boutton6"
@@ -152,7 +157,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00B7FF"
-                    android:text="6" />
+                    android:text="6"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -172,7 +178,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00B7FF"
-                    android:text="7" />
+                    android:text="7"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/boutton8"
@@ -182,7 +189,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00B7FF"
-                    android:text="8" />
+                    android:text="8"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/boutton9"
@@ -192,7 +200,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00B7FF"
-                    android:text="9" />
+                    android:text="9"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -212,7 +221,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00B7FF"
-                    android:text="(-)" />
+                    android:text="(-)"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/boutton0"
@@ -222,7 +232,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00B7FF"
-                    android:text="0" />
+                    android:text="0"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/bouttonValider"
@@ -232,7 +243,8 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:backgroundTint="#00B7FF"
-                    android:text="Ok" />
+                    android:text="Ok"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
         </LinearLayout>

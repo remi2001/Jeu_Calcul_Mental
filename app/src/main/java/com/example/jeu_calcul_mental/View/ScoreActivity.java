@@ -52,8 +52,6 @@ public class ScoreActivity extends AppCompatActivity {
                         temporary = TableauTousElementBDD[i];
                         TableauTousElementBDD[i] = TableauTousElementBDD[j];
                         TableauTousElementBDD[j] = temporary;
-                        if(i==placementDernierEnregistrement)
-                            placementDernierEnregistrement=j;
                     }
                 }
             }
@@ -87,11 +85,9 @@ public class ScoreActivity extends AppCompatActivity {
 
             TextView scoreDernierEnregistrement = findViewById(R.id.ScoreDernierEnregistrement);
             TextView pseudoDernierEnregistrement = findViewById(R.id.PseudoDernierEnregistrement);
-            TextView classementDernierEnregistrement = findViewById(R.id.ClassementDernierEnregistrement);
 
             pseudoDernierEnregistrement.setText(dernierEnregistrement.getPseudo());
             scoreDernierEnregistrement.setText("" + dernierEnregistrement.getScore());
-            classementDernierEnregistrement.setText(placementDernierEnregistrement+" :");
 
             pseudo1.setText(top10[0].getPseudo());
             score1.setText("" + top10[0].getScore());

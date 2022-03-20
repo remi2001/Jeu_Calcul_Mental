@@ -39,29 +39,6 @@ public abstract class BaseDao<T extends BaseEntity> {
         return entity;
     }
 
-    protected List<T> query(String selection, String[] selectionArgs, String sortOrder){
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
-
-        Cursor cursor = db.query(
-                getTableName(),
-                null,
-                selection,
-                selectionArgs,
-                null,
-                null,
-                sortOrder
-        );
-
-        List items = new ArrayList<T>();
-        while(cursor.moveToNext()) {
-            items.add(getEntity(cursor));
-
-        }
-        cursor.close();
-
-        return items;
-    }
-
 
     public T lastOrNull() {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
@@ -76,40 +53,6 @@ public abstract class BaseDao<T extends BaseEntity> {
                 null);
 
         cursor.moveToLast();
-        T last = this.getEntity(cursor);
-        cursor.close();
-
-        return last;
-    }
-
-
-    public long count() {
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
-
-        Cursor cursor = db.rawQuery("select count(*) from "+getTableName(), null);
-        cursor.moveToFirst();
-        int count= cursor.getInt(0);
-        cursor.close();
-
-        return count;
-    }
-
-    public T RecuperationElement(long IndiceEnregistrement) {
-        SQLiteDatabase db = dbHelper.getReadableDatabase();
-
-        Cursor cursor =db.query(
-                getTableName(),
-                null,
-                null,
-                null,
-                null,
-                null,
-                null);
-
-        cursor.moveToFirst();
-        for (int i=0 ; i<IndiceEnregistrement ; i++){
-            cursor.moveToNext();
-        }
         T last = this.getEntity(cursor);
         cursor.close();
 
