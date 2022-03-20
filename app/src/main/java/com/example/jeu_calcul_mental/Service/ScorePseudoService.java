@@ -13,11 +13,11 @@ public class ScorePseudoService {
         this.ScorePseudoDao = calculDao;
     }
 
-    public long getCalculNumber(){return ScorePseudoDao.count();}
+    public long getEnregistrementNumber(){return ScorePseudoDao.count();}
 
-    public ScorePseudo getDernierEnregistrement(){return ScorePseudoDao.lastOrNull();}
+    public ScorePseudo getEnregistrement(long indiceEnregistrement){return ScorePseudoDao.RecuperationElement(indiceEnregistrement);}
 
-    public ScorePseudo getEnregistrement(int indiceEnregistrement){return ScorePseudoDao.RecuperationElement(indiceEnregistrement);}
+    public List<ScorePseudo> getTousLesEnregistrement(){return ScorePseudoDao.RecuperationTousLesElement();}
 
     public void storeInDatabase(ScorePseudo ScorePseudo){ScorePseudoDao.create(ScorePseudo);}
 }

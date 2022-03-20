@@ -19,4 +19,5 @@
     <string name="valider">Valider</string>
     <string name="ResultatIncorrect">Résultat Incorrect ! Réessayez</string>
     <string name="retour_a_l_accueil">Retour a l\'accueil</string>
+    <string name="classement">Classement</string>
 </resources>

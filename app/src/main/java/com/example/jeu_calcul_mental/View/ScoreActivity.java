@@ -17,7 +17,7 @@ import java.util.List;
 
 public class ScoreActivity extends AppCompatActivity {
 
-    private ScorePseudoService scorePseudoService;
+    private ScorePseudoService ScorePseudoService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,38 +25,65 @@ public class ScoreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_score);
 
         try {
-            scorePseudoService = new ScorePseudoService(new ScorePseudoDao(new ScorePseudoBaseHelper(this)));
+            ScorePseudoService = new ScorePseudoService(new ScorePseudoDao(new ScorePseudoBaseHelper(this)));
 
             ScorePseudo[] Top10 = new ScorePseudo[10];
 
-            for(int initialise=0;initialise<10;initialise++){
-                Top10[initialise]= scorePseudoService.getEnregistrement(0);
-            }
+            List<ScorePseudo> TousElementBDD = ScorePseudoService.getTousLesEnregistrement();
 
-            for (int parcourBdd=1;parcourBdd<scorePseudoService.getCalculNumber();parcourBdd++) {
-                ScorePseudo Temp = scorePseudoService.getEnregistrement(parcourBdd);
-                if(Temp.getScore() > Top10[0].getScore())
-                {
-                     Top10[0] = Temp;
-                }
-            }
+            long max = ScorePseudoService.getEnregistrementNumber();
 
-            for (int ParcourClassement=1;ParcourClassement<10;ParcourClassement++){
-                for (int parcourBdd=1;parcourBdd<scorePseudoService.getCalculNumber();parcourBdd++) {
-                    ScorePseudo Temp = scorePseudoService.getEnregistrement(parcourBdd);
-                    for(int VerifClassemntSup=ParcourClassement;VerifClassemntSup>=0;VerifClassemntSup--) {
-                        if (Temp.getScore() > Top10[ParcourClassement].getScore() && Temp != Top10[ParcourClassement - VerifClassemntSup]) {
-                            Top10[0] = Temp;
-                        }
+            for(int ParcourClassement=0;ParcourClassement<10;ParcourClassement++){
+                if(max>=0) {
+
+                    for (ScorePseudo Best : TousElementBDD) {
+                        if (Best.getScore()>)
                     }
+                    max--;
                 }
             }
 
             TextView pseudo1 = findViewById(R.id.NomJoueur1);
-            TextView Score1 = findViewById(R.id.ScoreJoueur1);
+            TextView score1 = findViewById(R.id.ScoreJoueur1);
+            TextView pseudo2 = findViewById(R.id.NomJoueur2);
+            TextView score2 = findViewById(R.id.ScoreJoueur2);
+            TextView pseudo3 = findViewById(R.id.NomJoueur3);
+            TextView score3 = findViewById(R.id.ScoreJoueur3);
+            TextView pseudo4 = findViewById(R.id.NomJoueur4);
+            TextView score4 = findViewById(R.id.ScoreJoueur4);
+            TextView pseudo5 = findViewById(R.id.NomJoueur5);
+            TextView score5 = findViewById(R.id.ScoreJoueur5);
+            TextView pseudo6 = findViewById(R.id.NomJoueur6);
+            TextView score6 = findViewById(R.id.ScoreJoueur6);
+            TextView pseudo7 = findViewById(R.id.NomJoueur7);
+            TextView score7 = findViewById(R.id.ScoreJoueur7);
+            TextView pseudo8 = findViewById(R.id.NomJoueur8);
+            TextView score8 = findViewById(R.id.ScoreJoueur8);
+            TextView pseudo9 = findViewById(R.id.NomJoueur9);
+            TextView score9 = findViewById(R.id.ScoreJoueur9);
+            TextView pseudo10 = findViewById(R.id.NomJoueur10);
+            TextView score10 = findViewById(R.id.ScoreJoueur10);
 
             pseudo1.setText(Top10[0].getPseudo());
-            Score1.setText("" + Top10[0].getScore());
+            score1.setText("" + Top10[0].getScore());
+            pseudo2.setText(Top10[1].getPseudo());
+            score2.setText("" + Top10[1].getScore());
+            pseudo3.setText(Top10[2].getPseudo());
+            score3.setText("" + Top10[2].getScore());
+            pseudo4.setText(Top10[3].getPseudo());
+            score4.setText("" + Top10[3].getScore());
+            pseudo5.setText(Top10[4].getPseudo());
+            score5.setText("" + Top10[4].getScore());
+            pseudo6.setText(Top10[5].getPseudo());
+            score6.setText("" + Top10[5].getScore());
+            pseudo7.setText(Top10[6].getPseudo());
+            score7.setText("" + Top10[6].getScore());
+            pseudo8.setText(Top10[7].getPseudo());
+            score8.setText("" + Top10[7].getScore());
+            pseudo9.setText(Top10[8].getPseudo());
+            score9.setText("" + Top10[8].getScore());
+            pseudo10.setText(Top10[9].getPseudo());
+            score10.setText("" + Top10[9].getScore());
         }catch(Exception e){}
 
         Button BouttonRetourAccueil = findViewById(R.id.bouttonRetourAccueil);

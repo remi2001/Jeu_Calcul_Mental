@@ -35,6 +35,135 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TxtView_Classement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="@string/classement"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/Classement1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="1 :"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/Classement2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="2 :"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/Classement3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="3 :"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/Classement4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="4 :"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/Classement5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="5 :"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/Classement6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="6 :"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/Classement7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="7 :"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/Classement8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="8 :"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/Classement9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="9 :"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/Classement10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:text="10 :"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:background="#FFFFFF"
                 android:orientation="vertical">
 
@@ -53,6 +182,97 @@
                     android:id="@+id/NomJoueur1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/NomJoueur2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/NomJoueur3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/NomJoueur4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/NomJoueur5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/NomJoueur6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/NomJoueur7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/NomJoueur8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/NomJoueur9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/NomJoueur10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
                     android:textColor="#009688"
@@ -83,6 +303,97 @@
                     android:id="@+id/ScoreJoueur1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ScoreJoueur2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ScoreJoueur3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ScoreJoueur4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ScoreJoueur5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ScoreJoueur6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ScoreJoueur7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ScoreJoueur8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ScoreJoueur9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ScoreJoueur10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
                     android:textColor="#009688"
@@ -98,5 +409,6 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#00B7FF"
             android:text="@string/retour_a_l_accueil" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

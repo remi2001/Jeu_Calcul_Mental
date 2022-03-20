@@ -19,13 +19,13 @@ public class PseudoActivity extends AppCompatActivity {
     private TextView textViewScoreFinal;
     private TextInputEditText PseudoDefini;
     private Integer Score;
-    private ScorePseudoService scorePseudoService;
+    private ScorePseudoService ScorePseudoService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pseudo);
-        scorePseudoService = new ScorePseudoService(new ScorePseudoDao(new ScorePseudoBaseHelper(this)));
+        ScorePseudoService = new ScorePseudoService(new ScorePseudoDao(new ScorePseudoBaseHelper(this)));
 
         Score = getIntent().getIntExtra("Score",0);
 
@@ -39,26 +39,24 @@ public class PseudoActivity extends AppCompatActivity {
     }
 
     private void Validation(){
-        //A refaire
-        /*
         try {
-            if (Score>0 && Score>scorePseudoService.getDernierEnregistrement().getScore()) {
+            int minScore = ScorePseudoService.getEnregistrement(ScorePseudoService.getEnregistrementNumber()-11).getScore();
+            if (Score>0 && Score>minScore) {
                 ScorePseudo registre = new ScorePseudo();
                 registre.setPseudo(String.valueOf(PseudoDefini.getText()));
                 registre.setScore(Score);
-                scorePseudoService.storeInDatabase(registre);
+                ScorePseudoService.storeInDatabase(registre);
             }
         }
         catch (Exception e){
-         */
             if (Score>0) {
                 ScorePseudo registre = new ScorePseudo();
                 registre.setPseudo(String.valueOf(PseudoDefini.getText()));
                 registre.setScore(Score);
-                scorePseudoService.storeInDatabase(registre);
+                ScorePseudoService.storeInDatabase(registre);
             }
-            //Gestion Score = 0 avant
-        //}
+            //Gestion Score = 0 et Score trop petit page d'avant
+        }
         finish();
         ouvreScoreActivity();
     }

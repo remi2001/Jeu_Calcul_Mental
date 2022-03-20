@@ -94,7 +94,7 @@ public abstract class BaseDao<T extends BaseEntity> {
         return count;
     }
 
-    public T RecuperationElement(int IndiceEnregistrement) {
+    public T RecuperationElement(long IndiceEnregistrement) {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
         Cursor cursor =db.query(
@@ -114,5 +114,27 @@ public abstract class BaseDao<T extends BaseEntity> {
         cursor.close();
 
         return last;
+    }
+
+    public List<T> RecuperationTousLesElement() {
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        Cursor cursor =db.query(
+                getTableName(),
+                null,
+                null,
+                null,
+                null,
+                null,
+                null);
+
+        List items = new ArrayList<T>();
+        while(cursor.moveToNext()) {
+            items.add(getEntity(cursor));
+
+        }
+        cursor.close();
+
+        return items;
     }
 }
