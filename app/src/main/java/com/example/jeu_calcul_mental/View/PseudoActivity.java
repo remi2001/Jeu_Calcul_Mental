@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -27,12 +28,13 @@ public class PseudoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pseudo);
         scorePseudoService = new ScorePseudoService(new ScorePseudoDao(new ScorePseudoBaseHelper(this)));
 
-        score = getIntent().getIntExtra("Score",0);
+        score = getIntent().getIntExtra("score",0);
 
         textViewScoreFinal = findViewById(R.id.textViewScoreFinal);
         textViewScoreFinal.setText(score.toString());
 
         pseudoDefini = findViewById(R.id.TextInputEditPseudo);
+        pseudoDefini.setInputType(InputType.TYPE_TEXT_VARIATION_PERSON_NAME);
 
         Button boutonValider = findViewById(R.id.bouttonRetourAccueil);
         boutonValider.setOnClickListener(view -> Validation());

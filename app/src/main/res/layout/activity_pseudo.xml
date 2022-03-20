@@ -92,7 +92,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
                     android:gravity="center"
-                    android:hint="@string/ecrivez_votre_pseudo_ici" />
+                    android:hint="@string/ecrivez_votre_pseudo_ici"
+                    android:maxLength="15" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button

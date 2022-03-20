@@ -18,33 +18,33 @@ import java.util.Random;
 
 public class JeuActivity extends AppCompatActivity {
 
-    private Integer ElementResultat = 0;
-    private TextView TextViewResultat;
+    private Integer elementResultat = 0;
+    private TextView textViewResultat;
 
-    private TextView TextViewCalcul;
-    private EnumOperation TypeOperation = EnumOperation.ADD;
-    private Integer PremierElementCalcul = 0;
-    private Integer DeuxiemeElementCalcul = 0;
-    private final Random Aleat = new Random();
+    private TextView textViewCalcul;
+    private EnumOperation typeOperation = EnumOperation.ADD;
+    private Integer premierElementCalcul = 0;
+    private Integer deuxiemeElementCalcul = 0;
+    private final Random aleat = new Random();
 
-    private MenuItem NbScore;
-    private MenuItem NbErreurs;
-    private Integer Score=0;
-    private Integer ErreursEncorePossible = 3;
+    private MenuItem nbScore;
+    private MenuItem nbErreurs;
+    private Integer score=0;
+    private Integer erreursEncorePossible = 3;
 
-    private boolean AjoutMoins=false;
+    private boolean ajoutMoins=false;
 
-    private TextView TextViewMauvaiseReponse;
+    private TextView textViewMauvaiseReponse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jeu);
 
-        TextViewCalcul = findViewById(R.id.textViewCalcul);
-        TextViewResultat = findViewById(R.id.textViewReponse);
-        TextViewMauvaiseReponse = findViewById(R.id.textViewMauvaiseReponse);
-        TextViewMauvaiseReponse.setText("");
+        textViewCalcul = findViewById(R.id.textViewCalcul);
+        textViewResultat = findViewById(R.id.textViewReponse);
+        textViewMauvaiseReponse = findViewById(R.id.textViewMauvaiseReponse);
+        textViewMauvaiseReponse.setText("");
 
         //Methode permettant de créer et d'afficher le calcul
         AjoutValeurCalcul();
@@ -97,27 +97,27 @@ public class JeuActivity extends AppCompatActivity {
         inflater.inflate(R.menu.toolbar,menu);
 
         //Initialisation des item de la toolbar
-        NbScore = menu.findItem(R.id.NbScore);
-        NbErreurs = menu.findItem(R.id.NbErreurs);
+        nbScore = menu.findItem(R.id.NbScore);
+        nbErreurs = menu.findItem(R.id.NbErreurs);
 
         return true;
     }
 
     //Vidage de la textViewResultat lorque l'on clique sur le bouton effacer et reinitialisation de la variable
     private void videTextViewResultat() {
-        TextViewResultat.setText("");
-        ElementResultat=0;
-        AjoutMoins=false;
+        textViewResultat.setText("");
+        elementResultat=0;
+        ajoutMoins=false;
     }
 
     //Ajout de la valeur correpondant au bouton sur lequelle on a appuyer en gérant les valeurs trop grande
     private void AjoutValeurResultat(Integer valeur)
     {
         int borneMax = 99999;
-        if(10*ElementResultat+valeur > borneMax){
+        if(10*elementResultat+valeur > borneMax){
             Toast.makeText(this,getString(R.string.ErreurTropGrande),Toast.LENGTH_LONG).show();
         }else {
-            ElementResultat = 10 * ElementResultat + valeur;
+            elementResultat = 10 * elementResultat + valeur;
         }
         majTextViewResultat();
     }
@@ -126,48 +126,48 @@ public class JeuActivity extends AppCompatActivity {
     //Gestion des valeurs négative
     private void majTextViewResultat() {
         String textAAfficher="";
-        if (AjoutMoins){
-            if(ElementResultat!=0)
-                textAAfficher = "-" + ElementResultat.toString();
+        if (ajoutMoins){
+            if(elementResultat!=0)
+                textAAfficher = "-" + elementResultat.toString();
             else
                 textAAfficher = "-";
         }
         else{
-            textAAfficher = ElementResultat.toString();
+            textAAfficher = elementResultat.toString();
         }
-        TextViewResultat.setText(textAAfficher);
+        textViewResultat.setText(textAAfficher);
     }
 
     //Permet d'ajouter le calcul que l'utilisateur devra resoudre en generant les valeurs aleatoirement
     private void AjoutValeurCalcul() {
-        PremierElementCalcul = Aleat.nextInt(101);
-        DeuxiemeElementCalcul = Aleat.nextInt(101);
-        int choixTypeOperation = Aleat.nextInt(4);
+        premierElementCalcul = aleat.nextInt(101);
+        deuxiemeElementCalcul = aleat.nextInt(101);
+        int choixTypeOperation = aleat.nextInt(4);
         switch(choixTypeOperation) {
             case 0:
-                TypeOperation = EnumOperation.ADD;
+                typeOperation = EnumOperation.ADD;
                 break;
             case 1:
-                TypeOperation = EnumOperation.SUBSTRACT;
+                typeOperation = EnumOperation.SUBSTRACT;
                 break;
             case 2:
-                TypeOperation = EnumOperation.MULTIPLY;
+                typeOperation = EnumOperation.MULTIPLY;
                 break;
         }
-        String CalculAAfficher = PremierElementCalcul.toString() + " " +
-                TypeOperation.getSymbol() + " " + DeuxiemeElementCalcul.toString();
-        TextViewCalcul.setText(CalculAAfficher);
+        String CalculAAfficher = premierElementCalcul.toString() + " " +
+                typeOperation.getSymbol() + " " + deuxiemeElementCalcul.toString();
+        textViewCalcul.setText(CalculAAfficher);
     }
 
     //Permet de vérifier que le nombre entré par l'utilisateur correspond au resultat du calcul
     //Si le nombre d'erreurs possible est inférieur a 0 on l'ance l'activité pemettant d'enrgistrer le score
     private void Verification(){
-        if (AjoutMoins)
-            ElementResultat = -ElementResultat;
+        if (ajoutMoins)
+            elementResultat = -elementResultat;
 
-        switch (TypeOperation){
+        switch (typeOperation){
             case ADD:
-                if(PremierElementCalcul+DeuxiemeElementCalcul == ElementResultat){
+                if(premierElementCalcul+deuxiemeElementCalcul == elementResultat){
                     ResultatCorrect();
                 }
                 else{
@@ -175,7 +175,7 @@ public class JeuActivity extends AppCompatActivity {
                 }
                 break;
             case SUBSTRACT:
-                if(PremierElementCalcul-DeuxiemeElementCalcul == ElementResultat){
+                if(premierElementCalcul-deuxiemeElementCalcul == elementResultat){
                     ResultatCorrect();
                 }
                 else{
@@ -183,7 +183,7 @@ public class JeuActivity extends AppCompatActivity {
                 }
                 break;
             case MULTIPLY:
-                if(PremierElementCalcul*DeuxiemeElementCalcul == ElementResultat){
+                if(premierElementCalcul*deuxiemeElementCalcul == elementResultat){
                     ResultatCorrect();
                 }
                 else{
@@ -191,25 +191,25 @@ public class JeuActivity extends AppCompatActivity {
                 }
                 break;
         }
-        if(ErreursEncorePossible==-1) {
+        if(erreursEncorePossible==-1) {
             finish();
 
-            if(Score>0) {
+            if(score>0) {
                 //Lancement de l'activite Pseudo en fesant passer la valeur du score
                 Intent i = new Intent(this, PseudoActivity.class);
-                i.putExtra("Score", Score);
+                i.putExtra("score", score);
                 startActivity(i);
             }
         }
         videTextViewResultat();
-        NbScore.setTitle(Score.toString());
-        NbErreurs.setTitle(ErreursEncorePossible.toString());
+        nbScore.setTitle(score.toString());
+        nbErreurs.setTitle(erreursEncorePossible.toString());
     }
 
     //Ajout de la négativité dans le calcul uniquement si l'utilisateur n'a rien entré
     private void AjoutNegativite() {
-        if(ElementResultat==0) {
-            AjoutMoins=true;
+        if(elementResultat==0) {
+            ajoutMoins=true;
             majTextViewResultat();
         }
         else{
@@ -219,16 +219,16 @@ public class JeuActivity extends AppCompatActivity {
 
     //Action rélisé si le resultat du calcul correspond a la valeur entré par l'utilisateur
     private void ResultatCorrect(){
-        Score += 10;
+        score += 10;
         AjoutValeurCalcul();
-        TextViewMauvaiseReponse.setText("");
+        textViewMauvaiseReponse.setText("");
     }
 
     //Action rélisé si le resultat du calcul ne correspond pas a la valeur entré par l'utilisateur
     private void ResultatIncorrect(){
-        if(TextViewResultat.getText()!="" && TextViewResultat.getText() != "-") {
-            ErreursEncorePossible--;
-            TextViewMauvaiseReponse.setText(R.string.ResultatIncorrect);
+        if(textViewResultat.getText()!="" && textViewResultat.getText() != "-") {
+            erreursEncorePossible--;
+            textViewMauvaiseReponse.setText(R.string.ResultatIncorrect);
         }
         else{
             Toast.makeText(this,getString(R.string.ErreurValeurVide), Toast.LENGTH_LONG).show();
