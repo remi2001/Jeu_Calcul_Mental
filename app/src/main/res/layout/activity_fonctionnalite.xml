@@ -7,4 +7,28 @@
     android:layout_height="match_parent"
     tools:context=".View.FonctionnaliteActivity">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/textViewFonctionnalites"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonRetourAccueil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/retour_a_l_accueil" />
+  </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
