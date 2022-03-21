@@ -23,9 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
         Button boutonJeu = findViewById(R.id.bouttonJeu);
         Button boutonScore = findViewById(R.id.bouttonScore);
+        Button boutonFonctionnalite = findViewById(R.id.bouttonFonctionnalite);
 
         boutonJeu.setOnClickListener(view -> lanceActiviterJeu());
         boutonScore.setOnClickListener(view -> lancerActiviterScore());
+        boutonFonctionnalite.setOnClickListener(view -> lancerActiviterFonctionnalites());
     }
 
     //Lancement de l'activite Jeu
@@ -37,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
     //lancement de l'activite Score
     private void lancerActiviterScore() {
         Intent i = new Intent(this, ScoreActivity.class);
+        startActivity(i);
+    }
+
+    private void lancerActiviterFonctionnalites() {
+        Intent i = new Intent(this, FonctionnaliteActivity.class);
         startActivity(i);
     }
 }

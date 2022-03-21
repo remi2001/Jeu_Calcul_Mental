@@ -21,4 +21,5 @@
     <string name="retour_a_l_accueil">Retour a l\'accueil</string>
     <string name="classement">Classement</string>
     <string name="NonEnregistrerScore0">Votre score est de zéro, il n\'est pas enregistrer pour votre ego \n Réeesayez !!</string>
+    <string name="fonctionnalites">Fonctionnalités</string>
 </resources>
