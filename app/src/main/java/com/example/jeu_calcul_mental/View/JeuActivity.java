@@ -192,13 +192,16 @@ public class JeuActivity extends AppCompatActivity {
                 break;
         }
         if(erreursEncorePossible==-1) {
-            finish();
-
             if(score>0) {
                 //Lancement de l'activite Pseudo en fesant passer la valeur du score
                 Intent i = new Intent(this, PseudoActivity.class);
                 i.putExtra("score", score);
                 startActivity(i);
+            }
+            else{
+                AjoutValeurCalcul();
+                erreursEncorePossible=3;
+                textViewMauvaiseReponse.setText(R.string.NonEnregistrerScore0);
             }
         }
         videTextViewResultat();

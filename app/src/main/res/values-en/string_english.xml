@@ -21,4 +21,5 @@
     <string name="ResultatIncorrect">Incorrect result! Try again</string>
     <string name="retour_a_l_accueil">Return to home</string>
     <string name="classement">Ranking</string>
+    <string name="NonEnregistrerScore0">Your score is zero, it ain\'t save for your ego \n Try again!!</string>
 </resources>
