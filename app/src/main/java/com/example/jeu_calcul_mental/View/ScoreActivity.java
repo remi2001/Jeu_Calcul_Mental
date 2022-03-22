@@ -46,12 +46,14 @@ public class ScoreActivity extends AppCompatActivity {
 
             //Tri des elements
             ScorePseudo temporary;
-            for (int i = 0; i < listeTousElementBDD.size(); i++) {
-                for (int j = i + 1; j < listeTousElementBDD.size(); j++) {
-                    if (TableauTousElementBDD[i].getScore() < TableauTousElementBDD[j].getScore()) {
-                        temporary = TableauTousElementBDD[i];
-                        TableauTousElementBDD[i] = TableauTousElementBDD[j];
-                        TableauTousElementBDD[j] = temporary;
+            for (int parcoursBDD = 0; parcoursBDD < listeTousElementBDD.size(); parcoursBDD++) {
+                for (int verifValBDD = parcoursBDD + 1; verifValBDD < listeTousElementBDD.size(); verifValBDD++) {
+                    if (TableauTousElementBDD[verifValBDD].getScore() < TableauTousElementBDD[verifValBDD].getScore()) {
+                        for (int decalElement=parcoursBDD; decalElement<verifValBDD;decalElement++) {
+                            temporary = TableauTousElementBDD[decalElement];
+                            TableauTousElementBDD[decalElement] = TableauTousElementBDD[verifValBDD];
+                            TableauTousElementBDD[verifValBDD] = temporary;
+                        }
                     }
                 }
             }
