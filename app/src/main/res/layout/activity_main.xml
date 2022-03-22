@@ -53,11 +53,11 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/bouttonFonctionnalite"
+            android:id="@+id/bouttonAPropos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#00B7FF"
-            android:text="@string/fonctionnalites" />
+            android:text="@string/APropos" />
 
     </LinearLayout>
 

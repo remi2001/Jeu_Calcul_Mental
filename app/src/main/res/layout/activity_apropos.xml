@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.AproposActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewGroupe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="Auteurs"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textViewMembreR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="#FFFFFF"
+                android:text="- OMETZ Rémi"
+                android:textColor="#009688"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewMembreS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#FFFFFF"
+                android:text="- ZITOUNI Sébastian"
+                android:textColor="#009688"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewLangue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="Langues"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/textViewLangueFr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="#FFFFFF"
+                android:text="- Français"
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewLangueEn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#FFFFFF"
+                android:text="- Anglais"
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewFonctionnalites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="Fonctionnalités supplémentaires"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/Fonct1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#FFFFFF"
+                android:text="- "
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/Fonct2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#FFFFFF"
+                android:text="- "
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/Fonct3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#FFFFFF"
+                android:text="- "
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/Fonct4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#FFFFFF"
+                android:text="- "
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/Fonct5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#FFFFFF"
+                android:text="- "
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/Fonct6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#FFFFFF"
+                android:text="- "
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/Fonct7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#FFFFFF"
+                android:text="- "
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/Fonct8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#FFFFFF"
+                android:text="- "
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/Fonct9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="#FFFFFF"
+                android:text="- "
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/Fonct10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="#FFFFFF"
+                android:text="- "
+                android:textColor="#009688"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bouttonRetourAccueilAPropos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00B7FF"
+            android:text="@string/retour_a_l_accueil" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

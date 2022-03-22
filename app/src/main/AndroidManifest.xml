@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jeu_calcul_mental" >
+    package="com.example.jeu_calcul_mental">
 
     <application
         android:allowBackup="true"
@@ -8,9 +8,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Jeu_Calcul_Mental" >
+        android:theme="@style/Theme.Jeu_Calcul_Mental">
         <activity
-            android:name=".View.FonctionnaliteActivity"
+            android:name=".View.AproposActivity"
             android:exported="false" />
         <activity
             android:name=".View.PseudoActivity"
@@ -23,7 +23,7 @@
             android:exported="false" />
         <activity
             android:name=".View.MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
