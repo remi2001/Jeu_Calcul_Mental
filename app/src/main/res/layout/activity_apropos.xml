@@ -28,7 +28,7 @@
                 android:gravity="center"
                 android:text="Auteurs"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="22dp"
                 tools:ignore="NestedWeights" />
 
             <TextView
@@ -41,7 +41,7 @@
                 android:background="#FFFFFF"
                 android:text="- OMETZ Rémi"
                 android:textColor="#009688"
-                android:textSize="16sp"
+                android:textSize="16dp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -50,10 +50,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
                 android:background="#FFFFFF"
                 android:text="- ZITOUNI Sébastian"
                 android:textColor="#009688"
-                android:textSize="16sp"
+                android:textSize="16dp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -64,7 +65,7 @@
                 android:gravity="center"
                 android:text="Langues"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/textViewLangueFr"
@@ -76,7 +77,7 @@
                 android:background="#FFFFFF"
                 android:text="- Français"
                 android:textColor="#009688"
-                android:textSize="14sp" />
+                android:textSize="12dp" />
 
             <TextView
                 android:id="@+id/textViewLangueEn"
@@ -84,10 +85,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
                 android:background="#FFFFFF"
                 android:text="- Anglais"
                 android:textColor="#009688"
-                android:textSize="14sp" />
+                android:textSize="12dp" />
 
             <TextView
                 android:id="@+id/textViewFonctionnalites"
@@ -97,7 +99,7 @@
                 android:gravity="center"
                 android:text="Fonctionnalités supplémentaires"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/FonctJeuActivity"
@@ -108,7 +110,7 @@
                 android:background="#FFFFFF"
                 android:text="JeuActivity :"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="14dp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -120,7 +122,7 @@
                 android:background="#FFFFFF"
                 android:text="- Le (-) dans le resultat ne peut etre mis qu'en premier element sinon un message d'erreures s'affiche."
                 android:textColor="#009688"
-                android:textSize="12sp"
+                android:textSize="11dp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -132,7 +134,7 @@
                 android:background="#FFFFFF"
                 android:text="- Le calcul genere deux valeurs aleatoire entre 0 et 100 compris et genere une operation choisi aléatoirement parmis les 3 possible (+/-/x)."
                 android:textColor="#009688"
-                android:textSize="12sp"
+                android:textSize="11dp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -144,7 +146,7 @@
                 android:background="#FFFFFF"
                 android:text="- Si l'on appuie sur ok pour vérifier son calcul tous d'abord on vérifie que le résultat n'est pas vide afin d'éviter les appuis accidentel si celui si est vide on affiche a l'utilisateur qu'il doit saisir une valeur. Si le resultat n'est pas vide on vérifie si il est exact, si il est exact on incrémente le score de 10 et on génère un nouveau calcul. Sinon on décrémente le nombres d'erreures possibles de 1 et on affiche a l'utilisateur que le résultat n'est pas exact et qu'il peut réessayer."
                 android:textColor="#009688"
-                android:textSize="12sp"
+                android:textSize="11dp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -156,7 +158,7 @@
                 android:background="#FFFFFF"
                 android:text="- Si le resultat ne correspond a celui du calcul et que le nombre d'erreurs possibles est inférieur a 0 alors, si le score = 0 on affiche que l'on enregistre pas le calcul dans la Base de données puis l'on génère un nouveau calcul en remettant le nombres d'erreurs possibles a 3. Si le score est supérieur a 0 l'on fini cette activité pour empecher le joueur d'y revenir et on lance l'activité du pseudo."
                 android:textColor="#009688"
-                android:textSize="12sp"
+                android:textSize="11dp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -168,7 +170,7 @@
                 android:background="#FFFFFF"
                 android:text="PseudoActivity :"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="14dp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -178,9 +180,9 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="5dp"
                 android:background="#FFFFFF"
-                android:text="- Enregistrement dans la base de données du score et du pseudo et on termine cette page si le pseudo n'est pas vide. Sinon affichage du message nous disant de compléter notre pseudo. De plus le pseudo ne peut dépasser 15 caractères et est du type PersonneName."
+                android:text="- Enregistrement dans la base de données du score et du pseudo, et on termine cette page si le pseudo n'est pas vide. Sinon affichage du message nous disant de compléter notre pseudo. De plus le pseudo ne peut dépasser 15 caractères et est du type PersonneName."
                 android:textColor="#009688"
-                android:textSize="12sp"
+                android:textSize="11dp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -192,7 +194,7 @@
                 android:background="#FFFFFF"
                 android:text="ScoreActivity :"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="14dp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -204,7 +206,7 @@
                 android:background="#FFFFFF"
                 android:text="- On recupere tous d'abod tous les enregistrement de la BDD sous forme d'une liste. Puis on la transforme sous forme d'un tableau Qui nous permet par la suite de trier tous les enregistrement par ordre décroissant des scores en prenant en compte que si on a deux fois le meme score ca sera le premier a avoir effectuer et enregistre ce score dans la Base de données qui sera devant au classement. De plus on affiche uniquement les 10 meilleurs scores et si il manque des enregistrement l'on n'affiche rien."
                 android:textColor="#009688"
-                android:textSize="12sp"
+                android:textSize="11dp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -216,7 +218,7 @@
                 android:background="#FFFFFF"
                 android:text="- Affichage du dernier enregistrement que l'on a effectuer dans la base de données qui permet de se comparer avec les meilleurs scores."
                 android:textColor="#009688"
-                android:textSize="12sp"
+                android:textSize="11dp"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>
