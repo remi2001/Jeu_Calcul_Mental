@@ -35,8 +35,6 @@ public class ScoreActivity extends AppCompatActivity {
 
             List<ScorePseudo> listeTousElementBDD = scorePseudoService.getTousLesEnregistrement();
 
-            int placementDernierEnregistrement = listeTousElementBDD.size();
-
             ScorePseudo[] TableauTousElementBDD = new ScorePseudo[listeTousElementBDD.size()];
 
             //Chaque element de la liste devient un element du tableau

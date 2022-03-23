@@ -23,4 +23,5 @@
     <string name="NonEnregistrerScore0">Votre score est de zéro, il n\'est pas enregistrer pour votre ego \n Réeesayez !!</string>
     <string name="APropos">A Propos</string>
     <string name="ameliorer_votre_calcul_mental">Ameliorer votre calcul mental</string>
+    <string name="pseudovide">Compléter votre pseudo</string>
 </resources>

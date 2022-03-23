@@ -14,7 +14,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:background="#FFFFFF"
             android:gravity="center"
@@ -29,28 +29,31 @@
                 android:gravity="center"
                 android:text="Auteurs"
                 android:textColor="#000000"
-                android:textSize="24sp" />
+                android:textSize="20sp"
+                tools:ignore="NestedWeights" />
 
             <TextView
                 android:id="@+id/textViewMembreR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginBottom="5dp"
                 android:background="#FFFFFF"
                 android:text="- OMETZ Rémi"
                 android:textColor="#009688"
-                android:textSize="20sp" />
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textViewMembreS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:background="#FFFFFF"
                 android:text="- ZITOUNI Sébastian"
                 android:textColor="#009688"
-                android:textSize="20sp" />
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textViewLangue"
@@ -61,28 +64,28 @@
                 android:gravity="center"
                 android:text="Langues"
                 android:textColor="#000000"
-                android:textSize="22sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textViewLangueFr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginBottom="5dp"
                 android:background="#FFFFFF"
                 android:text="- Français"
                 android:textColor="#009688"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/textViewLangueEn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:background="#FFFFFF"
                 android:text="- Anglais"
                 android:textColor="#009688"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/textViewFonctionnalites"
@@ -93,108 +96,118 @@
                 android:gravity="center"
                 android:text="Fonctionnalités supplémentaires"
                 android:textColor="#000000"
-                android:textSize="22sp" />
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/Fonct1"
+                android:id="@+id/FonctJeuActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="8sp"
                 android:background="#FFFFFF"
-                android:text="- "
-                android:textColor="#009688"
-                android:textSize="18sp" />
+                android:text="JeuActivity :"
+                android:textColor="#000000"
+                android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/Fonct2"
+                android:id="@+id/FonctMoins"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:background="#FFFFFF"
-                android:text="- "
+                android:text="- Le (-) dans le resultat ne peut etre mis qu'en premier element sinon un message d'erreures s'affiche"
                 android:textColor="#009688"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/Fonct3"
+                android:id="@+id/FonctCalcul"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:background="#FFFFFF"
-                android:text="- "
+                android:text="- Le calcul genere deux valeurs aleatoire entre 0 et 100 compris et genere une operation choisi aléatoirement parmis les 3 possible (+/-/x)"
                 android:textColor="#009688"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/Fonct4"
+                android:id="@+id/FonctVerif"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:background="#FFFFFF"
-                android:text="- "
+                android:text="- Si l'on appuie sur ok pour vérifier son calcul tous d'abord on vérifie que le résultat n'est pas vide afin d'éviter les appuis accidentel si celui si est vide on affiche a l'utilisateur qu'il doit saisir une valeur. Si le resultat n'est pas vide on vérifie si il est exact, si il est exact on incrémente le score de 10 et on génère un nouveau calcul. Sinon on décrémente le nombres d'erreures possibles de 1 et on affiche a l'utilisateur que le résultat n'est pas exact et qu'il peut réessayer."
                 android:textColor="#009688"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/Fonct5"
+                android:id="@+id/FonctErreurs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:background="#FFFFFF"
-                android:text="- "
+                android:text="- Si le resultat ne correspond a celui du calcul et que le nombre d'erreurs possibles est inférieur a 0 alors, si le score = 0 on affiche que l'on enregistre pas le calcul dans la Base de données puis l'on génère un nouveau calcul en remettant le nombres d'erreurs possibles a 3. Si le score est supérieur a 0 l'on fini cette activité pour empecher le joueur d'y revenir et on lance l'activité du pseudo."
                 android:textColor="#009688"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/FonctPseudoActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8sp"
+                android:background="#FFFFFF"
+                android:text="PseudoActivity :"
+                android:textColor="#000000"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/Fonct6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:background="#FFFFFF"
                 android:text="- "
                 android:textColor="#009688"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/Fonct7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:background="#FFFFFF"
                 android:text="- "
                 android:textColor="#009688"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/Fonct8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:background="#FFFFFF"
                 android:text="- "
                 android:textColor="#009688"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/Fonct9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:background="#FFFFFF"
                 android:text="- "
                 android:textColor="#009688"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/Fonct10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginBottom="30dp"
                 android:background="#FFFFFF"
                 android:text="- "
                 android:textColor="#009688"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 

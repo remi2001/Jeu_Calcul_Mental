@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.jeu_calcul_mental.R;
 import com.example.jeu_calcul_mental.Service.ScorePseudoService;
@@ -41,20 +42,20 @@ public class PseudoActivity extends AppCompatActivity {
     }
 
     private void Validation(){
-        if (score>0) {
+        if(pseudoDefini.getText().toString().matches("")){
+            Toast.makeText(this, getString(R.string.pseudovide), Toast.LENGTH_LONG).show();
+        }else {
             ScorePseudo registre = new ScorePseudo();
             registre.setPseudo(String.valueOf(pseudoDefini.getText()));
             registre.setScore(score);
             scorePseudoService.storeInDatabase(registre);
             ouvreScoreActivity();
+            finish();
         }
-        finish();
     }
 
     private void ouvreScoreActivity(){
         Intent i = new Intent(this, ScoreActivity.class);
-        i.putExtra("Score",score);
-        i.putExtra("Pseudo",pseudoDefini.getText());
         startActivity(i);
     }
 }
