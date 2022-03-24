@@ -119,7 +119,6 @@ public class ScoreActivity extends AppCompatActivity {
             pseudo10.setText(top10[9].getPseudo());
             score10.setText("" + top10[9].getScore());
 
-
         }catch(Exception e){}
 
         Button BouttonRetourAccueil = findViewById(R.id.bouttonRetourAccueil);
