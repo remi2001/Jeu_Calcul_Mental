@@ -159,8 +159,8 @@ public class JeuActivity extends AppCompatActivity {
             deuxiemeElementCalcul = aleat.nextInt(11+MargeAAjouter);
         }
         else{
-            premierElementCalcul = aleat.nextInt(101+(MargeAAjouter*300));
-            deuxiemeElementCalcul = aleat.nextInt(101+(MargeAAjouter*300));
+            premierElementCalcul = aleat.nextInt(101+(MargeAAjouter*100));
+            deuxiemeElementCalcul = aleat.nextInt(101+(MargeAAjouter*100));
         }
         String CalculAAfficher = premierElementCalcul.toString() + " " +
                 typeOperation.getSymbol() + " " + deuxiemeElementCalcul.toString();

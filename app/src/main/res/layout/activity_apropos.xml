@@ -136,7 +136,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="5dp"
                 android:background="#FFFFFF"
-                android:text="- Le calcul génère deux valeurs aléatoire qui sont initialement pour les additions et les soustractions entre 0 et 100 et pour les multiplications entre 0 et 10. Cependant plus on avance dans la jeu et plus la marge s'agrandit jusqu'a obtenir lors d'un score de 400 des nommbre aléatoires entre 0 et 12000 pour les additions et les souctractions et des nombres entre 0 et 50 pour les multiplications.L'opération est aussi choisi aléatoirement parmis les 3 possible (+/-/x).De plus, l'utilisatuer ne peut entrée une valeur supérieur a 99999 sous peine d'un message d'erreur, ce qui doit etre pris en compte lors de la création aléatoire des calcul."
+                android:text="- Le calcul génère deux valeurs aléatoire qui sont initialement pour les additions et les soustractions entre 0 et 100 et pour les multiplications entre 0 et 10. Cependant plus on avance dans la jeu et plus la marge s'agrandit jusqu'a obtenir lors d'un score de 400 des nommbre aléatoires entre 0 et 4000 pour les additions et les souctractions et des nombres entre 0 et 50 pour les multiplications.L'opération est aussi choisi aléatoirement parmis les 3 possible (+/-/x).De plus, l'utilisatuer ne peut entrée une valeur supérieur a 99999 sous peine d'un message d'erreur, ce qui doit etre pris en compte lors de la création aléatoire des calcul."
                 android:textColor="#009688"
                 android:textSize="11sp"
                 tools:ignore="HardcodedText" />
