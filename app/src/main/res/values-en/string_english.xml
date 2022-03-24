@@ -6,7 +6,7 @@
     <string name="effacer">Clean</string>
     <string name="score">Score</string>
     <string name="nom">Name</string>
-    <string name="les_10_meilleurs_joueurs">The 10 best players</string>
+    <string name="les_meilleurs_joueurs">The best players</string>
     <string name="scoreJeu">Your score :</string>
     <string name="erreurs_possible_jeu">Possible Errors :</string>
     <string name="ErreurTropGrande">"Value to high"</string>

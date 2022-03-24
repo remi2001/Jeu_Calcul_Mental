@@ -5,7 +5,7 @@
     <string name="effacer">Effacer</string>
     <string name="score">Score</string>
     <string name="nom">Nom</string>
-    <string name="les_10_meilleurs_joueurs">Les 10 meilleurs joueurs</string>
+    <string name="les_meilleurs_joueurs">Les meilleurs joueurs</string>
     <string name="scoreJeu">Ton score :</string>
     <string name="erreurs_possible_jeu">Erreurs possible :</string>
     <string name="ErreurTropGrande">"Valeur trop grande"</string>

@@ -26,6 +26,46 @@ public class ScoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
+        TextView premier = findViewById(R.id.Classement1);
+        TextView pseudo1 = findViewById(R.id.NomJoueur1);
+        TextView score1 = findViewById(R.id.ScoreJoueur1);
+
+        TextView deuxieme = findViewById(R.id.Classement2);
+        TextView pseudo2 = findViewById(R.id.NomJoueur2);
+        TextView score2 = findViewById(R.id.ScoreJoueur2);
+
+        TextView troisieme = findViewById(R.id.Classement3);
+        TextView pseudo3 = findViewById(R.id.NomJoueur3);
+        TextView score3 = findViewById(R.id.ScoreJoueur3);
+
+        TextView quatrieme = findViewById(R.id.Classement4);
+        TextView pseudo4 = findViewById(R.id.NomJoueur4);
+        TextView score4 = findViewById(R.id.ScoreJoueur4);
+
+        TextView cinquieme = findViewById(R.id.Classement5);
+        TextView pseudo5 = findViewById(R.id.NomJoueur5);
+        TextView score5 = findViewById(R.id.ScoreJoueur5);
+
+        TextView sixieme = findViewById(R.id.Classement6);
+        TextView pseudo6 = findViewById(R.id.NomJoueur6);
+        TextView score6 = findViewById(R.id.ScoreJoueur6);
+
+        TextView septieme = findViewById(R.id.Classement7);
+        TextView pseudo7 = findViewById(R.id.NomJoueur7);
+        TextView score7 = findViewById(R.id.ScoreJoueur7);
+
+        TextView huitieme = findViewById(R.id.Classement8);
+        TextView pseudo8 = findViewById(R.id.NomJoueur8);
+        TextView score8 = findViewById(R.id.ScoreJoueur8);
+
+        TextView neuvieme = findViewById(R.id.Classement9);
+        TextView pseudo9 = findViewById(R.id.NomJoueur9);
+        TextView score9 = findViewById(R.id.ScoreJoueur9);
+
+        TextView dixieme = findViewById(R.id.Classement10);
+        TextView pseudo10 = findViewById(R.id.NomJoueur10);
+        TextView score10 = findViewById(R.id.ScoreJoueur10);
+
         try {
             scorePseudoService = new ScorePseudoService(new ScorePseudoDao(new ScorePseudoBaseHelper(this)));
 
@@ -62,36 +102,6 @@ public class ScoreActivity extends AppCompatActivity {
                     top10[ParcourClassement] = TableauTousElementBDD[ParcourClassement];
             }
 
-            TextView pseudo1 = findViewById(R.id.NomJoueur1);
-            TextView score1 = findViewById(R.id.ScoreJoueur1);
-
-            TextView pseudo2 = findViewById(R.id.NomJoueur2);
-            TextView score2 = findViewById(R.id.ScoreJoueur2);
-
-            TextView pseudo3 = findViewById(R.id.NomJoueur3);
-            TextView score3 = findViewById(R.id.ScoreJoueur3);
-
-            TextView pseudo4 = findViewById(R.id.NomJoueur4);
-            TextView score4 = findViewById(R.id.ScoreJoueur4);
-
-            TextView pseudo5 = findViewById(R.id.NomJoueur5);
-            TextView score5 = findViewById(R.id.ScoreJoueur5);
-
-            TextView pseudo6 = findViewById(R.id.NomJoueur6);
-            TextView score6 = findViewById(R.id.ScoreJoueur6);
-
-            TextView pseudo7 = findViewById(R.id.NomJoueur7);
-            TextView score7 = findViewById(R.id.ScoreJoueur7);
-
-            TextView pseudo8 = findViewById(R.id.NomJoueur8);
-            TextView score8 = findViewById(R.id.ScoreJoueur8);
-
-            TextView pseudo9 = findViewById(R.id.NomJoueur9);
-            TextView score9 = findViewById(R.id.ScoreJoueur9);
-
-            TextView pseudo10 = findViewById(R.id.NomJoueur10);
-            TextView score10 = findViewById(R.id.ScoreJoueur10);
-
             TextView scoreDernierEnregistrement = findViewById(R.id.ScoreDernierEnregistrement);
             TextView pseudoDernierEnregistrement = findViewById(R.id.PseudoDernierEnregistrement);
 
@@ -120,6 +130,46 @@ public class ScoreActivity extends AppCompatActivity {
             score10.setText("" + top10[9].getScore());
 
         }catch(Exception e){}
+
+        if (pseudo1.getText()==""){
+            premier.setText("");
+        }
+
+        if (pseudo2.getText()==""){
+            deuxieme.setText("");
+        }
+
+        if (pseudo3.getText()==""){
+            troisieme.setText("");
+        }
+
+        if (pseudo4.getText()==""){
+            quatrieme.setText("");
+        }
+
+        if (pseudo5.getText()==""){
+            cinquieme.setText("");
+        }
+
+        if (pseudo6.getText()==""){
+            sixieme.setText("");
+        }
+
+        if (pseudo7.getText()==""){
+            septieme.setText("");
+        }
+
+        if (pseudo8.getText()==""){
+            huitieme.setText("");
+        }
+
+        if (pseudo9.getText()==""){
+            neuvieme.setText("");
+        }
+
+        if (pseudo10.getText()==""){
+            dixieme.setText("");
+        }
 
         Button BouttonRetourAccueil = findViewById(R.id.bouttonRetourAccueil);
         BouttonRetourAccueil.setOnClickListener(view -> finish());
