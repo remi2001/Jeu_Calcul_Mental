@@ -41,7 +41,7 @@
                 android:background="#FFFFFF"
                 android:text="- OMETZ Rémi"
                 android:textColor="#009688"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -50,11 +50,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="5dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:background="#FFFFFF"
                 android:text="- ZITOUNI Sébastian"
                 android:textColor="#009688"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -78,7 +78,7 @@
                 android:background="#FFFFFF"
                 android:text="- Français"
                 android:textColor="#009688"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -87,11 +87,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="5dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:background="#FFFFFF"
                 android:text="- Anglais"
                 android:textColor="#009688"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -126,7 +126,7 @@
                 android:background="#FFFFFF"
                 android:text="- Le (-) dans le résultat ne peut etre mis par l'utilisateur qu'en premier élément sinon un message d'erreur s'affiche."
                 android:textColor="#009688"
-                android:textSize="11sp"
+                android:textSize="10sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -138,7 +138,7 @@
                 android:background="#FFFFFF"
                 android:text="- Le calcul génère deux valeurs aléatoire qui sont initialement pour les additions et les soustractions entre 0 et 100 et pour les multiplications entre 0 et 10. Cependant plus on avance dans la jeu et plus la marge s'agrandit jusqu'a obtenir lors d'un score de 400 des nommbre aléatoires entre 0 et 4000 pour les additions et les souctractions et des nombres entre 0 et 50 pour les multiplications.L'opération est aussi choisi aléatoirement parmis les 3 possible (+/-/x).De plus, l'utilisatuer ne peut entrée une valeur supérieur a 99999 sous peine d'un message d'erreur, ce qui doit etre pris en compte lors de la création aléatoire des calcul."
                 android:textColor="#009688"
-                android:textSize="11sp"
+                android:textSize="10sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -150,7 +150,7 @@
                 android:background="#FFFFFF"
                 android:text="- Si l'on appuie sur ok pour vérifier son calcul tous d'abord on vérifie que le résultat n'est pas vide afin d'éviter les appuis accidentel par le joueur si celui si est vide on affiche a l'utilisateur qu'il doit saisir une valeur. Si le resultat n'est pas vide on vérifie si il est exact, si il est exact on incrémente le score de 10 et on génère un nouveau calcul. Sinon on décrémente le nombres d'erreures possibles de 1 et on affiche a l'utilisateur que le résultat est incorrect et qu'il peut réessayer."
                 android:textColor="#009688"
-                android:textSize="11sp"
+                android:textSize="10sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -162,7 +162,7 @@
                 android:background="#FFFFFF"
                 android:text="- Si le resultat ne correspond a celui du calcul et que le nombre d'erreurs possibles est inférieur a 0 alors, si le score = 0 on affiche que l'on enregistre pas le calcul dans la Base de données et on invite le joueur a réessayer puis l'on génère un nouveau calcul en remettant le nombres d'erreurs possibles a 3. Si le score est supérieur a 0 l'on fini cette activité pour empecher le joueur d'y revenir et on lance l'activité du pseudo."
                 android:textColor="#009688"
-                android:textSize="11sp"
+                android:textSize="10sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -186,7 +186,7 @@
                 android:background="#FFFFFF"
                 android:text="- Si le pseudo n'est pas vide et que le joueur a appuyer sur le bouton valider alors on enregistre dans la base de données le score que le joueur vient de réaliser et le pseudo que le joueur vient d'entrée, et on termine cette page. Sinon affichage du message nous disant de compléter notre pseudo. De plus le pseudo ne peut dépasser 15 caractères et est du type PersonneName."
                 android:textColor="#009688"
-                android:textSize="11sp"
+                android:textSize="10sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -210,7 +210,7 @@
                 android:background="#FFFFFF"
                 android:text="- Trie de tous les enregistrement de la BDD par ordre décroissant des scores afin de réaliser le classement des 10 meilleurs joueur en prenant en compte que si on a deux fois le meme score, alors le premier a avoir effectuer et enregistrer ce score dans la Base de données sera devant au classement. De plus si il n'y a pas assez de données pour afficher les 10 meilleurs scores on affiche uniquement ceux présent dans la BDD."
                 android:textColor="#009688"
-                android:textSize="11sp"
+                android:textSize="10sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -222,7 +222,7 @@
                 android:background="#FFFFFF"
                 android:text="- Affichage du dernier enregistrement que l'on a réaliser dans la base de données qui permet de se comparer avec les meilleurs scores."
                 android:textColor="#009688"
-                android:textSize="11sp"
+                android:textSize="10sp"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>
