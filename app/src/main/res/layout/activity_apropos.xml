@@ -28,7 +28,7 @@
                 android:gravity="center"
                 android:text="Auteurs"
                 android:textColor="#000000"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 tools:ignore="HardcodedText,NestedWeights" />
 
             <TextView
@@ -65,7 +65,7 @@
                 android:gravity="center"
                 android:text="Langues"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -102,7 +102,7 @@
                 android:gravity="center"
                 android:text="Fonctionnalités supplémentaires"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -114,7 +114,7 @@
                 android:background="#FFFFFF"
                 android:text="JeuActivity :"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -174,7 +174,7 @@
                 android:background="#FFFFFF"
                 android:text="PseudoActivity :"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -198,7 +198,7 @@
                 android:background="#FFFFFF"
                 android:text="ScoreActivity :"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
