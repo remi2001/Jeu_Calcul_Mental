@@ -35,7 +35,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <TextView
                     android:id="@+id/TxtView_Classement"
@@ -55,10 +56,8 @@
                     android:layout_marginBottom="5dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="1 :"
                     android:textColor="#009688"
-                    android:textSize="18sp"
-                    tools:ignore="HardcodedText" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/Classement2"
@@ -67,10 +66,8 @@
                     android:layout_marginBottom="5dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="2 :"
                     android:textColor="#009688"
-                    android:textSize="18sp"
-                    tools:ignore="HardcodedText" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/Classement3"
@@ -79,10 +76,8 @@
                     android:layout_marginBottom="5dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="3 :"
                     android:textColor="#009688"
-                    android:textSize="18sp"
-                    tools:ignore="HardcodedText" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/Classement4"
@@ -91,10 +86,8 @@
                     android:layout_marginBottom="5dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="4 :"
                     android:textColor="#009688"
-                    android:textSize="18sp"
-                    tools:ignore="HardcodedText" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/Classement5"
@@ -103,10 +96,8 @@
                     android:layout_marginBottom="5dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="5 :"
                     android:textColor="#009688"
-                    android:textSize="18sp"
-                    tools:ignore="HardcodedText" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/Classement6"
@@ -115,10 +106,8 @@
                     android:layout_marginBottom="5dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="6 :"
                     android:textColor="#009688"
-                    android:textSize="18sp"
-                    tools:ignore="HardcodedText" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/Classement7"
@@ -127,10 +116,8 @@
                     android:layout_marginBottom="5dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="7 :"
                     android:textColor="#009688"
-                    android:textSize="18sp"
-                    tools:ignore="HardcodedText" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/Classement8"
@@ -139,10 +126,8 @@
                     android:layout_marginBottom="5dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="8 :"
                     android:textColor="#009688"
-                    android:textSize="18sp"
-                    tools:ignore="HardcodedText" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/Classement9"
@@ -151,10 +136,8 @@
                     android:layout_marginBottom="5dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="9 :"
                     android:textColor="#009688"
-                    android:textSize="18sp"
-                    tools:ignore="HardcodedText" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/Classement10"
@@ -163,10 +146,8 @@
                     android:layout_marginBottom="5dp"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="10 :"
                     android:textColor="#009688"
-                    android:textSize="18sp"
-                    tools:ignore="HardcodedText" />
+                    android:textSize="18sp" />
 
             </LinearLayout>
 

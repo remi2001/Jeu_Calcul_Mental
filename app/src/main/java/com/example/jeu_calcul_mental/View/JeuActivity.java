@@ -36,6 +36,8 @@ public class JeuActivity extends AppCompatActivity {
 
     private TextView textViewMauvaiseReponse;
 
+    private int MargeAAjouter=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -140,8 +142,6 @@ public class JeuActivity extends AppCompatActivity {
 
     //Permet d'ajouter le calcul que l'utilisateur devra resoudre en generant les valeurs aleatoirement
     private void AjoutValeurCalcul() {
-        premierElementCalcul = aleat.nextInt(101);
-        deuxiemeElementCalcul = aleat.nextInt(101);
         int choixTypeOperation = aleat.nextInt(4);
         switch(choixTypeOperation) {
             case 0:
@@ -153,6 +153,14 @@ public class JeuActivity extends AppCompatActivity {
             case 2:
                 typeOperation = EnumOperation.MULTIPLY;
                 break;
+        }
+        if(typeOperation==EnumOperation.MULTIPLY){
+            premierElementCalcul = aleat.nextInt(11+MargeAAjouter);
+            deuxiemeElementCalcul = aleat.nextInt(11+MargeAAjouter);
+        }
+        else{
+            premierElementCalcul = aleat.nextInt(101+(MargeAAjouter*300));
+            deuxiemeElementCalcul = aleat.nextInt(101+(MargeAAjouter*300));
         }
         String CalculAAfficher = premierElementCalcul.toString() + " " +
                 typeOperation.getSymbol() + " " + deuxiemeElementCalcul.toString();
@@ -227,6 +235,9 @@ public class JeuActivity extends AppCompatActivity {
         score += 10;
         AjoutValeurCalcul();
         textViewMauvaiseReponse.setText("");
+        if (MargeAAjouter<40){
+            MargeAAjouter += 1;
+        }
     }
 
     //Action rélisé si le resultat du calcul ne correspond pas a la valeur entré par l'utilisateur
